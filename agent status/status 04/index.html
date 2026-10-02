@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentFlow | Status Command Center</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+    <div class="cursor-glow"></div>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">A</div>
+
+            <div>
+                <h1>AgentFlow</h1>
+                <span>AI AGENT PLATFORM</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#" class="active">Status</a>
+            <a href="#">Agents</a>
+            <a href="#">Operations</a>
+            <a href="#">Analytics</a>
+
+        </nav>
+
+
+        <div class="header-status">
+
+            <span class="online-dot"></span>
+
+            LIVE MONITORING
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+
+        <!-- INTRO -->
+
+        <section class="intro">
+
+            <div>
+
+                <span class="section-tag">
+                    04 / AGENT OPERATIONS
+                </span>
+
+                <h2>
+                    Status <span>Command Center</span>
+                </h2>
+
+                <p>
+                    A centralized view of agent availability,
+                    workload and operational continuity.
+                </p>
+
+            </div>
+
+
+            <div class="system-time">
+
+                <small>LOCAL SYSTEM TIME</small>
+
+                <strong id="clock">
+                    00:00:00
+                </strong>
+
+                <span>
+                    OCT 02 2026
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATUS PIPELINE ================= -->
+
+        <section class="pipeline-panel">
+
+            <div class="panel-top">
+
+                <div>
+
+                    <span>AGENT OPERATIONS</span>
+
+                    <h3>
+                        Current Workforce State
+                    </h3>
+
+                </div>
+
+                <button id="scanButton">
+                    RUN STATUS SCAN
+                </button>
+
+            </div>
+
+
+            <div class="pipeline">
+
+
+                <!-- ALPHA -->
+
+                <div
+                    class="pipeline-agent online"
+                    data-status="online"
+                >
+
+                    <div class="agent-number">
+                        01
+                    </div>
+
+                    <div class="agent-symbol">
+                        A
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Alpha
+                        </strong>
+
+                        <span>
+                            Data Processing
+                        </span>
+
+                    </div>
+
+                    <div class="state">
+                        <i></i>
+                        ONLINE
+                    </div>
+
+                    <div class="uptime">
+                        99.8%
+                    </div>
+
+                </div>
+
+
+                <!-- BETA -->
+
+                <div
+                    class="pipeline-agent busy"
+                    data-status="busy"
+                >
+
+                    <div class="agent-number">
+                        02
+                    </div>
+
+                    <div class="agent-symbol">
+                        B
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Beta
+                        </strong>
+
+                        <span>
+                            Automation
+                        </span>
+
+                    </div>
+
+                    <div class="state">
+                        <i></i>
+                        BUSY
+                    </div>
+
+                    <div class="uptime">
+                        97.2%
+                    </div>
+
+                </div>
+
+
+                <!-- GAMMA -->
+
+                <div
+                    class="pipeline-agent error"
+                    data-status="error"
+                >
+
+                    <div class="agent-number">
+                        03
+                    </div>
+
+                    <div class="agent-symbol">
+                        G
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Gamma
+                        </strong>
+
+                        <span>
+                            Intelligence
+                        </span>
+
+                    </div>
+
+                    <div class="state">
+                        <i></i>
+                        ERROR
+                    </div>
+
+                    <div class="uptime">
+                        82.4%
+                    </div>
+
+                </div>
+
+
+                <!-- DELTA -->
+
+                <div
+                    class="pipeline-agent online"
+                    data-status="online"
+                >
+
+                    <div class="agent-number">
+                        04
+                    </div>
+
+                    <div class="agent-symbol">
+                        D
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Delta
+                        </strong>
+
+                        <span>
+                            Workflow
+                        </span>
+
+                    </div>
+
+                    <div class="state">
+                        <i></i>
+                        ONLINE
+                    </div>
+
+                    <div class="uptime">
+                        99.9%
+                    </div>
+
+                </div>
+
+
+                <!-- SIGMA -->
+
+                <div
+                    class="pipeline-agent busy"
+                    data-status="busy"
+                >
+
+                    <div class="agent-number">
+                        05
+                    </div>
+
+                    <div class="agent-symbol">
+                        S
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Sigma
+                        </strong>
+
+                        <span>
+                            Analytics
+                        </span>
+
+                    </div>
+
+                    <div class="state">
+                        <i></i>
+                        BUSY
+                    </div>
+
+                    <div class="uptime">
+                        96.5%
+                    </div>
+
+                </div>
+
+
+                <!-- OMEGA -->
+
+                <div
+                    class="pipeline-agent offline"
+                    data-status="offline"
+                >
+
+                    <div class="agent-number">
+                        06
+                    </div>
+
+                    <div class="agent-symbol">
+                        O
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Omega
+                        </strong>
+
+                        <span>
+                            Security
+                        </span>
+
+                    </div>
+
+                    <div class="state">
+                        <i></i>
+                        OFFLINE
+                    </div>
+
+                    <div class="uptime">
+                        91.1%
+                    </div>
+
+                </div>
+
+
+                <!-- NOVA -->
+
+                <div
+                    class="pipeline-agent online"
+                    data-status="online"
+                >
+
+                    <div class="agent-number">
+                        07
+                    </div>
+
+                    <div class="agent-symbol">
+                        N
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Nova
+                        </strong>
+
+                        <span>
+                            Communication
+                        </span>
+
+                    </div>
+
+                    <div class="state">
+                        <i></i>
+                        ONLINE
+                    </div>
+
+                    <div class="uptime">
+                        98.7%
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOWER DASHBOARD ================= -->
+
+        <section class="lower-grid">
+
+
+            <!-- ================= LEFT ================= -->
+
+            <div class="activity-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            REAL-TIME STREAM
+                        </span>
+
+                        <h3>
+                            Operational Activity
+                        </h3>
+
+                    </div>
+
+                    <div class="live-label">
+                        ● LIVE
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="activity-stream"
+                    id="activityStream"
+                >
+
+                    <div class="activity-item">
+
+                        <time>
+                            23:08:42
+                        </time>
+
+                        <div class="activity-marker online"></div>
+
+                        <div>
+
+                            <strong>
+                                Agent Alpha
+                            </strong>
+
+                            <p>
+                                Completed data processing task
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <time>
+                            23:07:19
+                        </time>
+
+                        <div class="activity-marker busy"></div>
+
+                        <div>
+
+                            <strong>
+                                Agent Beta
+                            </strong>
+
+                            <p>
+                                Started automation workflow
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <time>
+                            23:05:51
+                        </time>
+
+                        <div class="activity-marker error"></div>
+
+                        <div>
+
+                            <strong>
+                                Agent Gamma
+                            </strong>
+
+                            <p>
+                                Execution warning detected
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <time>
+                            23:04:22
+                        </time>
+
+                        <div class="activity-marker online"></div>
+
+                        <div>
+
+                            <strong>
+                                Agent Delta
+                            </strong>
+
+                            <p>
+                                Workflow successfully completed
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <time>
+                            23:01:44
+                        </time>
+
+                        <div class="activity-marker offline"></div>
+
+                        <div>
+
+                            <strong>
+                                Agent Omega
+                            </strong>
+
+                            <p>
+                                Connection terminated
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CENTER ================= -->
+
+            <div class="health-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            PERFORMANCE
+                        </span>
+
+                        <h3>
+                            Workforce Health
+                        </h3>
+
+                    </div>
+
+                    <span class="percentage">
+                        94.6%
+                    </span>
+
+                </div>
+
+
+                <div class="health-ring">
+
+                    <div class="ring">
+
+                        <div class="ring-inner">
+
+                            <strong>
+                                94.6
+                            </strong>
+
+                            <span>
+                                HEALTH
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="health-stats">
+
+                    <div>
+
+                        <span>UPTIME</span>
+                        <strong>99.2%</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>RESPONSE</span>
+                        <strong>24ms</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>EFFICIENCY</span>
+                        <strong>96%</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RIGHT ================= -->
+
+            <div class="distribution-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            DISTRIBUTION
+                        </span>
+
+                        <h3>
+                            Agent States
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="distribution">
+
+
+                    <div class="distribution-row">
+
+                        <div class="distribution-name">
+
+                            <span class="state-dot online"></span>
+
+                            <span>Online</span>
+
+                        </div>
+
+                        <strong id="onlineValue">
+                            43%
+                        </strong>
+
+                        <div class="distribution-bar">
+
+                            <span
+                                class="online"
+                                style="width:43%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-row">
+
+                        <div class="distribution-name">
+
+                            <span class="state-dot busy"></span>
+
+                            <span>Busy</span>
+
+                        </div>
+
+                        <strong id="busyValue">
+                            29%
+                        </strong>
+
+                        <div class="distribution-bar">
+
+                            <span
+                                class="busy"
+                                style="width:29%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-row">
+
+                        <div class="distribution-name">
+
+                            <span class="state-dot offline"></span>
+
+                            <span>Offline</span>
+
+                        </div>
+
+                        <strong id="offlineValue">
+                            14%
+                        </strong>
+
+                        <div class="distribution-bar">
+
+                            <span
+                                class="offline"
+                                style="width:14%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-row">
+
+                        <div class="distribution-name">
+
+                            <span class="state-dot error"></span>
+
+                            <span>Error</span>
+
+                        </div>
+
+                        <strong id="errorValue">
+                            14%
+                        </strong>
+
+                        <div class="distribution-bar">
+
+                            <span
+                                class="error"
+                                style="width:14%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="distribution-footer">
+
+                    <span>
+                        TOTAL AGENTS
+                    </span>
+
+                    <strong>
+                        07
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOTTOM SUMMARY ================= -->
+
+        <section class="summary-row">
+
+            <div>
+
+                <span>
+                    ACTIVE
+                </span>
+
+                <strong>
+                    03
+                </strong>
+
+                <small>
+                    Agents available
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    PROCESSING
+                </span>
+
+                <strong>
+                    02
+                </strong>
+
+                <small>
+                    Tasks in progress
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    ATTENTION
+                </span>
+
+                <strong>
+                    01
+                </strong>
+
+                <small>
+                    Error detected
+                </small>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    NETWORK
+                </span>
+
+                <strong>
+                    99.8%
+                </strong>
+
+                <small>
+                    Connection uptime
+                </small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <strong>
+            AgentFlow
+        </strong>
+
+        <span>
+            STATUS COMMAND CENTER
+        </span>
+
+        <span>
+            AI AGENT MANAGEMENT PLATFORM
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentFlow | Agent Performance</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-symbol">✦</span>
+
+        <span>
+            Agent<span>Flow</span>
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">Agents</a>
+        <a href="#">Activity</a>
+        <a href="#">System</a>
+
+    </nav>
+
+
+    <div class="nav-status">
+
+        <span class="pulse"></span>
+
+        SYSTEM ONLINE
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="section-label">
+                03 / AGENT PERFORMANCE
+            </span>
+
+            <h1>
+                Activity
+                <span>Matrix</span>
+            </h1>
+
+            <p>
+                Observe agent workloads, execution states,
+                completed tasks and real-time performance.
+            </p>
+
+        </div>
+
+
+        <div class="system-status">
+
+            <div class="status-orbit">
+
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+
+                <div class="status-core">
+
+                    <span class="core-dot"></span>
+
+                    <strong>
+                        08
+                    </strong>
+
+                    <small>
+                        ACTIVE
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SUMMARY
+    ========================== -->
+
+    <section class="summary-grid">
+
+
+        <div class="summary-card">
+
+            <span>
+                TOTAL TASKS
+            </span>
+
+            <strong>
+                248
+            </strong>
+
+            <small>
+                +18.4% TODAY
+            </small>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <span>
+                COMPLETED
+            </span>
+
+            <strong>
+                221
+            </strong>
+
+            <small class="green">
+                89.1% SUCCESS
+            </small>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <span>
+                RUNNING
+            </span>
+
+            <strong>
+                08
+            </strong>
+
+            <small class="cyan">
+                LIVE NOW
+            </small>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <span>
+                ERRORS
+            </span>
+
+            <strong>
+                03
+            </strong>
+
+            <small class="red">
+                REQUIRES REVIEW
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         SECTION HEADER
+    ========================== -->
+
+    <div class="section-heading">
+
+        <div>
+
+            <span>
+                AGENT MONITOR
+            </span>
+
+            <h2>
+                Active Agent Performance
+            </h2>
+
+        </div>
+
+
+        <button onclick="refreshAgents()">
+            ↻ REFRESH
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         AGENT MATRIX
+    ========================== -->
+
+    <section class="agent-grid">
+
+
+        <!-- AGENT ALPHA -->
+
+        <article class="agent-card">
+
+            <div class="agent-header">
+
+                <div class="agent-name">
+
+                    <div class="agent-avatar purple">
+                        A
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Agent Alpha
+                        </h3>
+
+                        <span>
+                            DATA ANALYSIS
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <span class="agent-status active">
+                    ● ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="metric-row">
+
+                <span>
+                    TASK COMPLETION
+                </span>
+
+                <strong>
+                    94%
+                </strong>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    class="progress-fill purple-fill"
+                    style="width:94%"
+                ></div>
+
+            </div>
+
+
+            <div class="agent-stats">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>58</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>55</strong>
+                </div>
+
+                <div>
+                    <span>ERRORS</span>
+                    <strong>03</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- AGENT BETA -->
+
+        <article class="agent-card">
+
+            <div class="agent-header">
+
+                <div class="agent-name">
+
+                    <div class="agent-avatar cyan">
+                        B
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Agent Beta
+                        </h3>
+
+                        <span>
+                            AUTOMATION
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <span class="agent-status running">
+                    ● RUNNING
+                </span>
+
+            </div>
+
+
+            <div class="metric-row">
+
+                <span>
+                    TASK COMPLETION
+                </span>
+
+                <strong>
+                    87%
+                </strong>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    class="progress-fill cyan-fill"
+                    style="width:87%"
+                ></div>
+
+            </div>
+
+
+            <div class="agent-stats">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>46</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>40</strong>
+                </div>
+
+                <div>
+                    <span>ERRORS</span>
+                    <strong>06</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- AGENT GAMMA -->
+
+        <article class="agent-card">
+
+            <div class="agent-header">
+
+                <div class="agent-name">
+
+                    <div class="agent-avatar red">
+                        G
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Agent Gamma
+                        </h3>
+
+                        <span>
+                            RESEARCH
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <span class="agent-status error">
+                    ● ERROR
+                </span>
+
+            </div>
+
+
+            <div class="metric-row">
+
+                <span>
+                    TASK COMPLETION
+                </span>
+
+                <strong>
+                    72%
+                </strong>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    class="progress-fill red-fill"
+                    style="width:72%"
+                ></div>
+
+            </div>
+
+
+            <div class="agent-stats">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>36</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>26</strong>
+                </div>
+
+                <div>
+                    <span>ERRORS</span>
+                    <strong>10</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- AGENT DELTA -->
+
+        <article class="agent-card">
+
+            <div class="agent-header">
+
+                <div class="agent-name">
+
+                    <div class="agent-avatar green">
+                        D
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Agent Delta
+                        </h3>
+
+                        <span>
+                            REPORTING
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <span class="agent-status active">
+                    ● ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="metric-row">
+
+                <span>
+                    TASK COMPLETION
+                </span>
+
+                <strong>
+                    97%
+                </strong>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    class="progress-fill green-fill"
+                    style="width:97%"
+                ></div>
+
+            </div>
+
+
+            <div class="agent-stats">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>51</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>49</strong>
+                </div>
+
+                <div>
+                    <span>ERRORS</span>
+                    <strong>02</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         ACTIVITY ANALYSIS
+    ========================== -->
+
+    <section class="analysis-section">
+
+
+        <div class="analysis-card">
+
+            <div class="analysis-header">
+
+                <div>
+
+                    <span>
+                        EXECUTION DISTRIBUTION
+                    </span>
+
+                    <h2>
+                        Activity Overview
+                    </h2>
+
+                </div>
+
+                <span class="live-label">
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+            <div class="bars">
+
+
+                <div class="bar-item">
+
+                    <div class="bar-info">
+
+                        <span>
+                            COMPLETED
+                        </span>
+
+                        <strong>
+                            89%
+                        </strong>
+
+                    </div>
+
+                    <div class="bar">
+                        <div
+                            class="bar-fill completed"
+                            style="width:89%"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar-info">
+
+                        <span>
+                            RUNNING
+                        </span>
+
+                        <strong>
+                            7%
+                        </strong>
+
+                    </div>
+
+                    <div class="bar">
+                        <div
+                            class="bar-fill running"
+                            style="width:7%"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar-info">
+
+                        <span>
+                            FAILED
+                        </span>
+
+                        <strong>
+                            4%
+                        </strong>
+
+                    </div>
+
+                    <div class="bar">
+                        <div
+                            class="bar-fill failed"
+                            style="width:4%"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SYSTEM LOG -->
+
+        <div class="system-log">
+
+            <div class="analysis-header">
+
+                <div>
+
+                    <span>
+                        SYSTEM EVENTS
+                    </span>
+
+                    <h2>
+                        Latest Signals
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="signal">
+
+                <span class="signal-dot green-dot"></span>
+
+                <div>
+                    <strong>
+                        Agent Delta
+                    </strong>
+
+                    <small>
+                        Workflow completed
+                    </small>
+                </div>
+
+                <time>
+                    10:44
+                </time>
+
+            </div>
+
+
+            <div class="signal">
+
+                <span class="signal-dot cyan-dot"></span>
+
+                <div>
+                    <strong>
+                        Agent Beta
+                    </strong>
+
+                    <small>
+                        Processing task #103
+                    </small>
+                </div>
+
+                <time>
+                    10:42
+                </time>
+
+            </div>
+
+
+            <div class="signal">
+
+                <span class="signal-dot red-dot"></span>
+
+                <div>
+                    <strong>
+                        Agent Gamma
+                    </strong>
+
+                    <small>
+                        Execution error
+                    </small>
+
+                </div>
+
+                <time>
+                    10:35
+                </time>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER STATS
+    ========================== -->
+
+    <section class="footer-stats">
+
+        <div>
+
+            <span>
+                SYSTEM UPTIME
+            </span>
+
+            <strong>
+                99.98%
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                AVG RESPONSE
+            </span>
+
+            <strong>
+                142ms
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                ACTIVE PROCESSES
+            </span>
+
+            <strong>
+                17
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                NETWORK
+            </span>
+
+            <strong class="network">
+                ● STABLE
+            </strong>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        ✦ AgentFlow
+    </strong>
+
+    <span>
+        AGENT ACTIVITY LOG · TEMPLATE 03
+    </span>
+
+    <span>
+        © 2026
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

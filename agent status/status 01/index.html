@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentFlow | Agent Status</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+
+
+<!-- TOP NAVBAR -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="logo-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div>
+            <h2>AgentFlow</h2>
+            <small>AI AGENT PLATFORM</small>
+        </div>
+
+    </div>
+
+
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#" class="active">Agent Status</a>
+        <a href="#">Agents</a>
+        <a href="#">Activity</a>
+    </nav>
+
+
+    <div class="top-right">
+
+        <div class="system-online">
+            <span></span>
+            SYSTEM ONLINE
+        </div>
+
+        <button class="icon-btn">🔔</button>
+
+        <div class="profile">
+
+            <div class="avatar">
+                AD
+            </div>
+
+            <div>
+                <strong>Admin</strong>
+                <small>Administrator</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main>
+
+    <!-- PAGE HEADER -->
+
+    <section class="page-header">
+
+        <div>
+
+            <p>AGENT MONITORING / 01</p>
+
+            <h1>
+                Agent
+                <span>Status</span>
+            </h1>
+
+            <div class="subtitle">
+                Monitor the real-time operational status of every AI agent.
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <div class="last-update">
+                LAST UPDATE
+                <strong id="lastUpdate">Just now</strong>
+            </div>
+
+            <button class="refresh-btn" onclick="refreshStatuses()">
+                ↻ Refresh
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATUS SUMMARY -->
+
+    <section class="status-summary">
+
+        <div class="summary-card online-card">
+
+            <div class="summary-icon">●</div>
+
+            <div>
+                <span>ONLINE</span>
+                <strong id="onlineCount">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="summary-card busy-card">
+
+            <div class="summary-icon">●</div>
+
+            <div>
+                <span>BUSY</span>
+                <strong id="busyCount">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="summary-card offline-card">
+
+            <div class="summary-icon">●</div>
+
+            <div>
+                <span>OFFLINE</span>
+                <strong id="offlineCount">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="summary-card error-card">
+
+            <div class="summary-icon">⚠</div>
+
+            <div>
+                <span>ERROR</span>
+                <strong id="errorCount">0</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATUS CONTROLS -->
+
+    <section class="control-panel">
+
+        <div class="control-left">
+
+            <span>AGENT STATUS</span>
+
+            <button
+                class="filter active-filter"
+                data-filter="all"
+            >
+                ALL
+            </button>
+
+            <button
+                class="filter"
+                data-filter="online"
+            >
+                🟢 ONLINE
+            </button>
+
+            <button
+                class="filter"
+                data-filter="busy"
+            >
+                🟡 BUSY
+            </button>
+
+            <button
+                class="filter"
+                data-filter="offline"
+            >
+                🔴 OFFLINE
+            </button>
+
+            <button
+                class="filter"
+                data-filter="error"
+            >
+                ⚠ ERROR
+            </button>
+
+        </div>
+
+
+        <div class="auto-status">
+
+            <span class="pulse"></span>
+
+            LIVE STATUS SIMULATION
+
+        </div>
+
+    </section>
+
+
+    <!-- AGENT GRID -->
+
+    <section class="agents-grid" id="agentsGrid">
+
+
+        <!-- AGENT ALPHA -->
+
+        <div
+            class="agent-card"
+            data-status="online"
+            data-agent="alpha"
+        >
+
+            <div class="card-top">
+
+                <div class="agent-identity">
+
+                    <div class="agent-icon purple">
+                        A
+                    </div>
+
+                    <div>
+                        <h3>Agent Alpha</h3>
+                        <span>Production Agent</span>
+                    </div>
+
+                </div>
+
+                <div class="status-badge online">
+                    <i></i>
+                    <span class="status-text">ONLINE</span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-description">
+                Handles production automation and customer workflows.
+            </div>
+
+
+            <div class="agent-details">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>284</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>99.2%</strong>
+                </div>
+
+                <div>
+                    <span>UPTIME</span>
+                    <strong>18h</strong>
+                </div>
+
+            </div>
+
+
+            <div class="status-footer">
+
+                <span>
+                    Last active: <b>Now</b>
+                </span>
+
+                <span class="agent-dot"></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AGENT BETA -->
+
+        <div
+            class="agent-card"
+            data-status="busy"
+            data-agent="beta"
+        >
+
+            <div class="card-top">
+
+                <div class="agent-identity">
+
+                    <div class="agent-icon cyan">
+                        B
+                    </div>
+
+                    <div>
+                        <h3>Agent Beta</h3>
+                        <span>Automation Agent</span>
+                    </div>
+
+                </div>
+
+                <div class="status-badge busy">
+                    <i></i>
+                    <span class="status-text">BUSY</span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-description">
+                Running workflow synchronization and task automation.
+            </div>
+
+
+            <div class="agent-details">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>238</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>98.7%</strong>
+                </div>
+
+                <div>
+                    <span>LOAD</span>
+                    <strong>82%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="status-footer">
+
+                <span>
+                    Last active: <b>12 sec ago</b>
+                </span>
+
+                <span class="agent-dot"></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AGENT GAMMA -->
+
+        <div
+            class="agent-card"
+            data-status="error"
+            data-agent="gamma"
+        >
+
+            <div class="card-top">
+
+                <div class="agent-identity">
+
+                    <div class="agent-icon green">
+                        G
+                    </div>
+
+                    <div>
+                        <h3>Agent Gamma</h3>
+                        <span>Data Agent</span>
+                    </div>
+
+                </div>
+
+                <div class="status-badge error">
+                    <i>⚠</i>
+                    <span class="status-text">ERROR</span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-description">
+                Data analysis agent requiring memory optimization.
+            </div>
+
+
+            <div class="error-message">
+                ⚠ Memory threshold exceeded
+            </div>
+
+
+            <div class="agent-details">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>196</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>97.8%</strong>
+                </div>
+
+                <div>
+                    <span>LOAD</span>
+                    <strong>96%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="status-footer">
+
+                <span>
+                    Last active: <b>31 sec ago</b>
+                </span>
+
+                <span class="agent-dot"></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AGENT DELTA -->
+
+        <div
+            class="agent-card"
+            data-status="offline"
+            data-agent="delta"
+        >
+
+            <div class="card-top">
+
+                <div class="agent-identity">
+
+                    <div class="agent-icon orange">
+                        D
+                    </div>
+
+                    <div>
+                        <h3>Agent Delta</h3>
+                        <span>Workflow Agent</span>
+                    </div>
+
+                </div>
+
+                <div class="status-badge offline">
+                    <i></i>
+                    <span class="status-text">OFFLINE</span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-description">
+                Manages scheduled workflows and report generation.
+            </div>
+
+
+            <div class="agent-details">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>174</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>99.5%</strong>
+                </div>
+
+                <div>
+                    <span>UPTIME</span>
+                    <strong>—</strong>
+                </div>
+
+            </div>
+
+
+            <div class="status-footer">
+
+                <span>
+                    Last active: <b>14 min ago</b>
+                </span>
+
+                <span class="agent-dot"></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AGENT SIGMA -->
+
+        <div
+            class="agent-card"
+            data-status="online"
+            data-agent="sigma"
+        >
+
+            <div class="card-top">
+
+                <div class="agent-identity">
+
+                    <div class="agent-icon pink">
+                        S
+                    </div>
+
+                    <div>
+                        <h3>Agent Sigma</h3>
+                        <span>Security Agent</span>
+                    </div>
+
+                </div>
+
+                <div class="status-badge online">
+                    <i></i>
+                    <span class="status-text">ONLINE</span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-description">
+                Monitors security events and automated system checks.
+            </div>
+
+
+            <div class="agent-details">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>142</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>99.8%</strong>
+                </div>
+
+                <div>
+                    <span>UPTIME</span>
+                    <strong>22h</strong>
+                </div>
+
+            </div>
+
+
+            <div class="status-footer">
+
+                <span>
+                    Last active: <b>Now</b>
+                </span>
+
+                <span class="agent-dot"></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AGENT OMEGA -->
+
+        <div
+            class="agent-card"
+            data-status="busy"
+            data-agent="omega"
+        >
+
+            <div class="card-top">
+
+                <div class="agent-identity">
+
+                    <div class="agent-icon blue">
+                        O
+                    </div>
+
+                    <div>
+                        <h3>Agent Omega</h3>
+                        <span>Research Agent</span>
+                    </div>
+
+                </div>
+
+                <div class="status-badge busy">
+                    <i></i>
+                    <span class="status-text">BUSY</span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-description">
+                Performing research analysis and information processing.
+            </div>
+
+
+            <div class="agent-details">
+
+                <div>
+                    <span>TASKS</span>
+                    <strong>121</strong>
+                </div>
+
+                <div>
+                    <span>SUCCESS</span>
+                    <strong>98.9%</strong>
+                </div>
+
+                <div>
+                    <span>LOAD</span>
+                    <strong>74%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="status-footer">
+
+                <span>
+                    Last active: <b>8 sec ago</b>
+                </span>
+
+                <span class="agent-dot"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <span>
+            AgentFlow Agent Status Monitor
+        </span>
+
+        <span class="footer-online">
+            <i></i>
+            All monitoring systems operational
+        </span>
+
+    </footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

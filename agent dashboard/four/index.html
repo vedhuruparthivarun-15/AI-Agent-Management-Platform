@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AgentFlow | AI Agent Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+
+
+<!-- =========================
+     TOP NAVBAR
+========================= -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <span class="brand-symbol">✦</span>
+
+        <span>
+            Agent<span>Flow</span>
+        </span>
+
+    </div>
+
+
+    <div class="topbar-right">
+
+        <div class="notification">
+            ♧
+            <span class="notification-dot"></span>
+        </div>
+
+        <div class="user-profile">
+
+            <div class="avatar">
+                V
+            </div>
+
+            <div class="user-info">
+
+                <strong>
+                    Admin
+                </strong>
+
+                <span>
+                    SYSTEM USER
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     DASHBOARD LAYOUT
+========================= -->
+
+<div class="dashboard-layout">
+
+
+    <!-- =====================
+         SIDEBAR
+    ====================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-label">
+            PLATFORM
+        </div>
+
+
+        <a href="#" class="side-link active">
+
+            <span>▦</span>
+
+            Dashboard
+
+        </a>
+
+
+        <a href="#" class="side-link">
+
+            <span>◈</span>
+
+            Agents
+
+        </a>
+
+
+        <a href="#" class="side-link">
+
+            <span>✓</span>
+
+            Tasks
+
+        </a>
+
+
+        <a href="#" class="side-link">
+
+            <span>◇</span>
+
+            Workflows
+
+        </a>
+
+
+        <a href="#" class="side-link">
+
+            <span>◉</span>
+
+            Activity
+
+        </a>
+
+
+        <div class="sidebar-divider"></div>
+
+
+        <div class="sidebar-label">
+            SYSTEM
+        </div>
+
+
+        <a href="#" class="side-link">
+
+            <span>⚙</span>
+
+            Settings
+
+        </a>
+
+
+        <a href="#" class="side-link">
+
+            <span>?</span>
+
+            Help
+
+        </a>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-small">
+
+                <span class="online-dot"></span>
+
+                <div>
+
+                    <strong>
+                        SYSTEM ONLINE
+                    </strong>
+
+                    <small>
+                        All services operational
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================
+         MAIN DASHBOARD
+    ====================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- HEADER -->
+
+        <section class="dashboard-heading">
+
+            <div>
+
+                <span>
+                    01 / OVERVIEW
+                </span>
+
+                <h1>
+                    AI Agent
+                    <strong>Dashboard</strong>
+                </h1>
+
+                <p>
+                    Monitor your agents, tasks and workflows
+                    from one centralized command interface.
+                </p>
+
+            </div>
+
+
+            <button
+                class="refresh-btn"
+                onclick="refreshDashboard()"
+            >
+                ↻ REFRESH
+            </button>
+
+        </section>
+
+
+
+        <!-- =================
+             KPI CARDS
+        ================== -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        TOTAL AGENTS
+                    </span>
+
+                    <div class="stat-icon purple">
+                        ◈
+                    </div>
+
+                </div>
+
+                <strong id="agentCount">
+                    12
+                </strong>
+
+                <small>
+                    +2 THIS MONTH
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        ACTIVE AGENTS
+                    </span>
+
+                    <div class="stat-icon cyan">
+                        ●
+                    </div>
+
+                </div>
+
+                <strong>
+                    08
+                </strong>
+
+                <small class="cyan-text">
+                    CURRENTLY RUNNING
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        TOTAL TASKS
+                    </span>
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                </div>
+
+                <strong id="taskCount">
+                    24
+                </strong>
+
+                <small class="green-text">
+                    18 COMPLETED
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        SUCCESS RATE
+                    </span>
+
+                    <div class="stat-icon purple">
+                        %
+                    </div>
+
+                </div>
+
+                <strong>
+                    98.4%
+                </strong>
+
+                <small>
+                    +3.2% THIS WEEK
+                </small>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================
+             MAIN CONTENT GRID
+        ================== -->
+
+        <section class="content-grid">
+
+
+            <!-- PERFORMANCE -->
+
+            <div class="panel performance-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span>
+                            PERFORMANCE
+                        </span>
+
+                        <h2>
+                            Agent Performance
+                        </h2>
+
+                    </div>
+
+
+                    <select>
+
+                        <option>
+                            This Week
+                        </option>
+
+                        <option>
+                            This Month
+                        </option>
+
+                        <option>
+                            Today
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="y-axis">
+
+                        <span>100</span>
+                        <span>75</span>
+                        <span>50</span>
+                        <span>25</span>
+                        <span>0</span>
+
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <div class="chart-line line-one"></div>
+                        <div class="chart-line line-two"></div>
+                        <div class="chart-line line-three"></div>
+                        <div class="chart-line line-four"></div>
+
+
+                        <svg
+                            viewBox="0 0 700 220"
+                            preserveAspectRatio="none"
+                            class="performance-chart"
+                        >
+
+                            <polyline
+                                points="
+                                0,170
+                                80,145
+                                150,155
+                                220,110
+                                300,125
+                                370,75
+                                450,95
+                                520,55
+                                600,70
+                                700,30
+                                "
+                            />
+
+                        </svg>
+
+
+                        <div class="x-axis">
+
+                            <span>MON</span>
+                            <span>TUE</span>
+                            <span>WED</span>
+                            <span>THU</span>
+                            <span>FRI</span>
+                            <span>SAT</span>
+                            <span>SUN</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AGENT STATUS -->
+
+            <div class="panel agent-status-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span>
+                            AGENT STATUS
+                        </span>
+
+                        <h2>
+                            Live Agents
+                        </h2>
+
+                    </div>
+
+                    <a href="#">
+                        VIEW ALL
+                    </a>
+
+                </div>
+
+
+                <div class="agent-row">
+
+                    <div class="agent-avatar purple">
+                        A
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Alpha
+                        </strong>
+
+                        <small>
+                            Data Analysis
+                        </small>
+
+                    </div>
+
+                    <span class="status active">
+                        ● ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="agent-row">
+
+                    <div class="agent-avatar cyan">
+                        B
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Beta
+                        </strong>
+
+                        <small>
+                            Automation
+                        </small>
+
+                    </div>
+
+                    <span class="status active">
+                        ● ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="agent-row">
+
+                    <div class="agent-avatar green">
+                        D
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Delta
+                        </strong>
+
+                        <small>
+                            Reporting
+                        </small>
+
+                    </div>
+
+                    <span class="status idle">
+                        ● IDLE
+                    </span>
+
+                </div>
+
+
+                <div class="agent-row">
+
+                    <div class="agent-avatar red">
+                        G
+                    </div>
+
+                    <div class="agent-details">
+
+                        <strong>
+                            Agent Gamma
+                        </strong>
+
+                        <small>
+                            Research
+                        </small>
+
+                    </div>
+
+                    <span class="status error">
+                        ● ERROR
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================
+             BOTTOM GRID
+        ================== -->
+
+        <section class="bottom-grid">
+
+
+            <!-- RECENT ACTIVITY -->
+
+            <div class="panel activity-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span>
+                            RECENT ACTIVITY
+                        </span>
+
+                        <h2>
+                            Latest Events
+                        </h2>
+
+                    </div>
+
+                    <a href="#">
+                        VIEW LOG
+                    </a>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-icon success">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Agent Alpha completed task
+                        </strong>
+
+                        <small>
+                            Dataset analysis completed successfully
+                        </small>
+
+                    </div>
+
+                    <time>
+                        2m
+                    </time>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-icon running">
+                        ▶
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Agent Beta started task
+                        </strong>
+
+                        <small>
+                            Processing automation request
+                        </small>
+
+                    </div>
+
+                    <time>
+                        5m
+                    </time>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-icon error">
+                        !
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Agent Gamma error
+                        </strong>
+
+                        <small>
+                            Execution requires attention
+                        </small>
+
+                    </div>
+
+                    <time>
+                        9m
+                    </time>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-icon success">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Workflow completed
+                        </strong>
+
+                        <small>
+                            Automated report generated
+                        </small>
+
+                    </div>
+
+                    <time>
+                        14m
+                    </time>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TASK OVERVIEW -->
+
+            <div class="panel task-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span>
+                            TASK OVERVIEW
+                        </span>
+
+                        <h2>
+                            Task Progress
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task-progress">
+
+                    <div class="progress-info">
+
+                        <span>
+                            COMPLETED
+                        </span>
+
+                        <strong>
+                            75%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            style="width:75%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task-progress">
+
+                    <div class="progress-info">
+
+                        <span>
+                            RUNNING
+                        </span>
+
+                        <strong>
+                            17%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-bar cyan-bar">
+
+                        <div
+                            style="width:17%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task-progress">
+
+                    <div class="progress-info">
+
+                        <span>
+                            FAILED
+                        </span>
+
+                        <strong>
+                            8%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-bar red-bar">
+
+                        <div
+                            style="width:8%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task-total">
+
+                    <strong>
+                        24
+                    </strong>
+
+                    <span>
+                        TOTAL TASKS TODAY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        ✦ AgentFlow
+    </strong>
+
+    <span>
+        AI AGENT DASHBOARD · TEMPLATE 01
+    </span>
+
+    <span>
+        SYSTEM UPTIME 99.98%
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

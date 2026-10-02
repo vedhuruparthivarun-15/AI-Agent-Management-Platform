@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentFlow | Activity Analytics</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-symbol">✦</span>
+
+        <span>
+            Agent<span>Flow</span>
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">Agents</a>
+        <a href="#">Activity</a>
+        <a href="#">System</a>
+
+    </nav>
+
+
+    <div class="nav-status">
+
+        <span class="pulse"></span>
+
+        SYSTEM ONLINE
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+
+            <span class="section-label">
+                04 / ACTIVITY ANALYTICS
+            </span>
+
+            <h1>
+                Activity
+                <span>Analytics</span>
+            </h1>
+
+            <p>
+                Analyze agent activity patterns, execution volume,
+                system events and operational trends.
+            </p>
+
+        </div>
+
+
+        <div class="analytics-number">
+
+            <span>
+                TOTAL EVENTS
+            </span>
+
+            <strong id="totalEvents">
+                1,284
+            </strong>
+
+            <small>
+                LAST 30 DAYS
+            </small>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TOP METRICS
+    ========================== -->
+
+    <section class="metrics">
+
+        <div class="metric-card">
+
+            <span>
+                TODAY
+            </span>
+
+            <strong>
+                248
+            </strong>
+
+            <small class="purple">
+                +18.4%
+            </small>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <span>
+                COMPLETED
+            </span>
+
+            <strong>
+                221
+            </strong>
+
+            <small class="green">
+                89.1%
+            </small>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <span>
+                FAILED
+            </span>
+
+            <strong>
+                12
+            </strong>
+
+            <small class="red">
+                4.8%
+            </small>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <span>
+                AVG / HOUR
+            </span>
+
+            <strong>
+                53
+            </strong>
+
+            <small class="cyan">
+                LIVE
+            </small>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ANALYTICS GRID
+    ========================== -->
+
+    <section class="analytics-grid">
+
+
+        <!-- =====================
+             ACTIVITY HEATMAP
+        ====================== -->
+
+        <div class="panel heatmap-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span>
+                        ACTIVITY DENSITY
+                    </span>
+
+                    <h2>
+                        Agent Activity Heatmap
+                    </h2>
+
+                </div>
+
+                <span class="period">
+                    LAST 12 WEEKS
+                </span>
+
+            </div>
+
+
+            <div class="heatmap-wrapper">
+
+                <div class="days">
+
+                    <span>MON</span>
+                    <span>TUE</span>
+                    <span>WED</span>
+                    <span>THU</span>
+                    <span>FRI</span>
+                    <span>SAT</span>
+                    <span>SUN</span>
+
+                </div>
+
+
+                <div class="heatmap" id="heatmap">
+
+                </div>
+
+            </div>
+
+
+            <div class="heatmap-legend">
+
+                <span>LOW</span>
+
+                <i class="level level-1"></i>
+                <i class="level level-2"></i>
+                <i class="level level-3"></i>
+                <i class="level level-4"></i>
+                <i class="level level-5"></i>
+
+                <span>HIGH</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             EVENT DISTRIBUTION
+        ====================== -->
+
+        <div class="panel distribution-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span>
+                        EVENT DISTRIBUTION
+                    </span>
+
+                    <h2>
+                        Activity Types
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="donut-area">
+
+                <div class="donut">
+
+                    <div class="donut-center">
+
+                        <strong>
+                            1.2K
+                        </strong>
+
+                        <span>
+                            EVENTS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="legend-list">
+
+                <div>
+
+                    <span>
+                        <i class="dot purple-dot"></i>
+                        TASK EXECUTION
+                    </span>
+
+                    <strong>
+                        48%
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        <i class="dot cyan-dot"></i>
+                        WORKFLOW
+                    </span>
+
+                    <strong>
+                        27%
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        <i class="dot green-dot"></i>
+                        SYSTEM
+                    </span>
+
+                    <strong>
+                        17%
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        <i class="dot red-dot"></i>
+                        ERRORS
+                    </span>
+
+                    <strong>
+                        8%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ACTIVITY CHART
+    ========================== -->
+
+    <section class="panel chart-panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span>
+                    EVENT VOLUME
+                </span>
+
+                <h2>
+                    Activity Over Time
+                </h2>
+
+            </div>
+
+
+            <div class="chart-controls">
+
+                <button
+                    class="chart-btn active"
+                    onclick="changePeriod('week', this)"
+                >
+                    WEEK
+                </button>
+
+                <button
+                    class="chart-btn"
+                    onclick="changePeriod('month', this)"
+                >
+                    MONTH
+                </button>
+
+                <button
+                    class="chart-btn"
+                    onclick="changePeriod('year', this)"
+                >
+                    YEAR
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="chart">
+
+            <div class="y-axis">
+
+                <span>300</span>
+                <span>250</span>
+                <span>200</span>
+                <span>150</span>
+                <span>100</span>
+                <span>50</span>
+                <span>0</span>
+
+            </div>
+
+
+            <div class="chart-area">
+
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+
+
+                <div class="bars" id="activityBars">
+
+                    <div class="chart-bar" style="height:42%">
+                        <span>MON</span>
+                    </div>
+
+                    <div class="chart-bar" style="height:67%">
+                        <span>TUE</span>
+                    </div>
+
+                    <div class="chart-bar" style="height:51%">
+                        <span>WED</span>
+                    </div>
+
+                    <div class="chart-bar" style="height:82%">
+                        <span>THU</span>
+                    </div>
+
+                    <div class="chart-bar" style="height:72%">
+                        <span>FRI</span>
+                    </div>
+
+                    <div class="chart-bar" style="height:38%">
+                        <span>SAT</span>
+                    </div>
+
+                    <div class="chart-bar" style="height:61%">
+                        <span>SUN</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EVENT TABLE
+    ========================== -->
+
+    <section class="panel table-panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span>
+                    EVENT SUMMARY
+                </span>
+
+                <h2>
+                    Recent Activity Statistics
+                </h2>
+
+            </div>
+
+            <button
+                class="export-btn"
+                onclick="exportData()"
+            >
+                EXPORT DATA
+            </button>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            EVENT TYPE
+                        </th>
+
+                        <th>
+                            EVENTS
+                        </th>
+
+                        <th>
+                            SUCCESS
+                        </th>
+
+                        <th>
+                            FAILED
+                        </th>
+
+                        <th>
+                            AVG TIME
+                        </th>
+
+                        <th>
+                            STATUS
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <span class="event-name">
+                                <i class="dot purple-dot"></i>
+                                Task Execution
+                            </span>
+                        </td>
+
+                        <td>612</td>
+
+                        <td class="green">
+                            584
+                        </td>
+
+                        <td class="red">
+                            28
+                        </td>
+
+                        <td>
+                            138ms
+                        </td>
+
+                        <td>
+                            <span class="status active">
+                                ACTIVE
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <span class="event-name">
+                                <i class="dot cyan-dot"></i>
+                                Workflow
+                            </span>
+                        </td>
+
+                        <td>347</td>
+
+                        <td class="green">
+                            332
+                        </td>
+
+                        <td class="red">
+                            15
+                        </td>
+
+                        <td>
+                            201ms
+                        </td>
+
+                        <td>
+                            <span class="status active">
+                                ACTIVE
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <span class="event-name">
+                                <i class="dot green-dot"></i>
+                                System
+                            </span>
+                        </td>
+
+                        <td>218</td>
+
+                        <td class="green">
+                            216
+                        </td>
+
+                        <td class="red">
+                            02
+                        </td>
+
+                        <td>
+                            89ms
+                        </td>
+
+                        <td>
+                            <span class="status stable">
+                                STABLE
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <span class="event-name">
+                                <i class="dot red-dot"></i>
+                                Errors
+                            </span>
+                        </td>
+
+                        <td>107</td>
+
+                        <td>
+                            95
+                        </td>
+
+                        <td class="red">
+                            12
+                        </td>
+
+                        <td>
+                            421ms
+                        </td>
+
+                        <td>
+                            <span class="status warning">
+                                REVIEW
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER STATS
+    ========================== -->
+
+    <section class="footer-stats">
+
+        <div>
+
+            <span>
+                TOTAL EVENTS
+            </span>
+
+            <strong id="footerEvents">
+                1,284
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                SUCCESS RATE
+            </span>
+
+            <strong class="green">
+                96.7%
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                PEAK ACTIVITY
+            </span>
+
+            <strong>
+                14:00
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                SYSTEM STATUS
+            </span>
+
+            <strong class="green">
+                ● NORMAL
+            </strong>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        ✦ AgentFlow
+    </strong>
+
+    <span>
+        AGENT ACTIVITY LOG · TEMPLATE 04
+    </span>
+
+    <span>
+        © 2026
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

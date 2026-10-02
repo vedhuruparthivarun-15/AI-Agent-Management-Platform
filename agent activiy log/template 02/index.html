@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentFlow | Activity Feed</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-symbol">✦</span>
+
+        <span>
+            Agent<span>Flow</span>
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">Agents</a>
+        <a href="#">Activity</a>
+        <a href="#">System</a>
+
+    </nav>
+
+
+    <div class="nav-status">
+
+        <span class="pulse"></span>
+
+        SYSTEM ONLINE
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <span class="section-number">
+                02 / ACTIVITY MONITORING
+            </span>
+
+            <h1>
+                Agent
+                <span>Activity</span>
+                Feed
+            </h1>
+
+            <p>
+                Monitor every important action performed by
+                your AI agents in real time.
+            </p>
+
+        </div>
+
+
+        <div class="hero-core">
+
+            <div class="core-ring ring-one"></div>
+            <div class="core-ring ring-two"></div>
+
+            <div class="core-center">
+
+                <strong id="eventCounter">
+                    24
+                </strong>
+
+                <span>
+                    EVENTS
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTROL BAR
+    ========================== -->
+
+    <section class="control-bar">
+
+        <div class="control-title">
+
+            <span>
+                LIVE ACTIVITY
+            </span>
+
+            <strong>
+                Real-time Agent Events
+            </strong>
+
+        </div>
+
+
+        <div class="controls">
+
+            <button
+                class="filter active"
+                onclick="filterActivity('all', this)"
+            >
+                ALL
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterActivity('completed', this)"
+            >
+                COMPLETED
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterActivity('running', this)"
+            >
+                RUNNING
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterActivity('error', this)"
+            >
+                ERRORS
+            </button>
+
+            <button
+                class="refresh"
+                onclick="refreshActivity()"
+            >
+                ↻
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ACTIVITY FEED
+    ========================== -->
+
+    <section class="activity-feed" id="activityFeed">
+
+
+        <!-- ACTIVITY 01 -->
+
+        <article
+            class="activity-card"
+            data-status="completed"
+        >
+
+            <div class="activity-index">
+                01
+            </div>
+
+
+            <div class="activity-icon completed-icon">
+                ✓
+            </div>
+
+
+            <div class="activity-main">
+
+                <div class="activity-top">
+
+                    <div>
+
+                        <span class="activity-type">
+                            TASK COMPLETED
+                        </span>
+
+                        <h2>
+                            Agent Alpha completed Task #102
+                        </h2>
+
+                    </div>
+
+                    <time>
+                        10:30 AM
+                    </time>
+
+                </div>
+
+
+                <p>
+                    Dataset analysis and research processing
+                    completed successfully.
+                </p>
+
+
+                <div class="activity-meta">
+
+                    <span>
+                        AGENT: <strong>ALPHA</strong>
+                    </span>
+
+                    <span>
+                        TASK: <strong>#102</strong>
+                    </span>
+
+                    <span class="status completed-text">
+                        ● COMPLETED
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ACTIVITY 02 -->
+
+        <article
+            class="activity-card"
+            data-status="running"
+        >
+
+            <div class="activity-index">
+                02
+            </div>
+
+
+            <div class="activity-icon running-icon">
+                ▶
+            </div>
+
+
+            <div class="activity-main">
+
+                <div class="activity-top">
+
+                    <div>
+
+                        <span class="activity-type">
+                            TASK EXECUTION
+                        </span>
+
+                        <h2>
+                            Agent Beta started Task #103
+                        </h2>
+
+                    </div>
+
+                    <time>
+                        10:32 AM
+                    </time>
+
+                </div>
+
+
+                <p>
+                    Agent Beta is currently processing
+                    the requested analytics operation.
+                </p>
+
+
+                <div class="activity-meta">
+
+                    <span>
+                        AGENT: <strong>BETA</strong>
+                    </span>
+
+                    <span>
+                        TASK: <strong>#103</strong>
+                    </span>
+
+                    <span class="status running-text">
+                        ● RUNNING
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ACTIVITY 03 -->
+
+        <article
+            class="activity-card"
+            data-status="error"
+        >
+
+            <div class="activity-index">
+                03
+            </div>
+
+
+            <div class="activity-icon error-icon">
+                !
+            </div>
+
+
+            <div class="activity-main">
+
+                <div class="activity-top">
+
+                    <div>
+
+                        <span class="activity-type">
+                            SYSTEM EVENT
+                        </span>
+
+                        <h2>
+                            Agent Gamma encountered an error
+                        </h2>
+
+                    </div>
+
+                    <time>
+                        10:35 AM
+                    </time>
+
+                </div>
+
+
+                <p>
+                    An unexpected execution error interrupted
+                    the current operation.
+                </p>
+
+
+                <div class="activity-meta">
+
+                    <span>
+                        AGENT: <strong>GAMMA</strong>
+                    </span>
+
+                    <span>
+                        TASK: <strong>#098</strong>
+                    </span>
+
+                    <span class="status error-text">
+                        ● ERROR
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ACTIVITY 04 -->
+
+        <article
+            class="activity-card"
+            data-status="completed"
+        >
+
+            <div class="activity-index">
+                04
+            </div>
+
+
+            <div class="activity-icon completed-icon">
+                ✓
+            </div>
+
+
+            <div class="activity-main">
+
+                <div class="activity-top">
+
+                    <div>
+
+                        <span class="activity-type">
+                            WORKFLOW
+                        </span>
+
+                        <h2>
+                            Agent Delta completed workflow
+                        </h2>
+
+                    </div>
+
+                    <time>
+                        10:38 AM
+                    </time>
+
+                </div>
+
+
+                <p>
+                    Automated report generation workflow
+                    finished without errors.
+                </p>
+
+
+                <div class="activity-meta">
+
+                    <span>
+                        AGENT: <strong>DELTA</strong>
+                    </span>
+
+                    <span>
+                        TASK: <strong>#104</strong>
+                    </span>
+
+                    <span class="status completed-text">
+                        ● COMPLETED
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ACTIVITY 05 -->
+
+        <article
+            class="activity-card"
+            data-status="running"
+        >
+
+            <div class="activity-index">
+                05
+            </div>
+
+
+            <div class="activity-icon running-icon">
+                ↻
+            </div>
+
+
+            <div class="activity-main">
+
+                <div class="activity-top">
+
+                    <div>
+
+                        <span class="activity-type">
+                            AGENT STATUS
+                        </span>
+
+                        <h2>
+                            Agent Alpha is processing a new task
+                        </h2>
+
+                    </div>
+
+                    <time>
+                        10:41 AM
+                    </time>
+
+                </div>
+
+
+                <p>
+                    A new task has been assigned and execution
+                    is currently in progress.
+                </p>
+
+
+                <div class="activity-meta">
+
+                    <span>
+                        AGENT: <strong>ALPHA</strong>
+                    </span>
+
+                    <span>
+                        TASK: <strong>#105</strong>
+                    </span>
+
+                    <span class="status running-text">
+                        ● RUNNING
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ACTIVITY 06 -->
+
+        <article
+            class="activity-card"
+            data-status="completed"
+        >
+
+            <div class="activity-index">
+                06
+            </div>
+
+
+            <div class="activity-icon completed-icon">
+                ✓
+            </div>
+
+
+            <div class="activity-main">
+
+                <div class="activity-top">
+
+                    <div>
+
+                        <span class="activity-type">
+                            DATA PROCESSING
+                        </span>
+
+                        <h2>
+                            Agent Sigma completed data analysis
+                        </h2>
+
+                    </div>
+
+                    <time>
+                        10:44 AM
+                    </time>
+
+                </div>
+
+
+                <p>
+                    Data validation and processing pipeline
+                    completed successfully.
+                </p>
+
+
+                <div class="activity-meta">
+
+                    <span>
+                        AGENT: <strong>SIGMA</strong>
+                    </span>
+
+                    <span>
+                        TASK: <strong>#106</strong>
+                    </span>
+
+                    <span class="status completed-text">
+                        ● COMPLETED
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         BOTTOM INFO
+    ========================== -->
+
+    <section class="bottom-info">
+
+        <div>
+
+            <span>
+                ACTIVE AGENTS
+            </span>
+
+            <strong>
+                08
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                EVENTS TODAY
+            </span>
+
+            <strong id="eventsToday">
+                124
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                SUCCESS RATE
+            </span>
+
+            <strong class="success">
+                98.4%
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                SYSTEM
+            </span>
+
+            <strong class="online">
+                ● OPERATIONAL
+            </strong>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+        ✦ AgentFlow
+    </div>
+
+    <span>
+        AI AGENT ACTIVITY LOG · TEMPLATE 02
+    </span>
+
+    <span>
+        © 2026
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
