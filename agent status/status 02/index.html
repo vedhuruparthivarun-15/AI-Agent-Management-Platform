@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentFlow | Agent Status</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-grid"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-icon">A</div>
+
+            <div>
+                <h1>AgentFlow</h1>
+                <span>AI AGENT PLATFORM</span>
+            </div>
+        </div>
+
+        <div class="top-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+        <div class="top-actions">
+            <button class="icon-btn">⌕</button>
+            <button class="icon-btn">🔔</button>
+
+            <div class="profile">
+                <div class="profile-avatar">AD</div>
+
+                <div class="profile-info">
+                    <strong>Admin</strong>
+                    <span>Administrator</span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+    <main class="container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <p class="eyebrow">AGENT MONITORING SYSTEM</p>
+
+                <h2>
+                    Agent <span>Status</span>
+                </h2>
+
+                <p class="description">
+                    Monitor the real-time operational status of all AI agents.
+                </p>
+            </div>
+
+            <button class="refresh-btn" id="refreshBtn">
+                ↻ Refresh Status
+            </button>
+
+        </section>
+
+
+        <!-- ================= STATUS CARDS ================= -->
+        <section class="status-summary">
+
+            <div class="summary-card online">
+                <div class="summary-top">
+                    <span>ONLINE</span>
+                    <div class="summary-icon">●</div>
+                </div>
+
+                <strong id="onlineCount">3</strong>
+
+                <p>Agents currently active</p>
+            </div>
+
+
+            <div class="summary-card busy">
+                <div class="summary-top">
+                    <span>BUSY</span>
+                    <div class="summary-icon">◉</div>
+                </div>
+
+                <strong id="busyCount">2</strong>
+
+                <p>Agents processing tasks</p>
+            </div>
+
+
+            <div class="summary-card offline">
+                <div class="summary-top">
+                    <span>OFFLINE</span>
+                    <div class="summary-icon">●</div>
+                </div>
+
+                <strong id="offlineCount">1</strong>
+
+                <p>Agents currently offline</p>
+            </div>
+
+
+            <div class="summary-card error">
+                <div class="summary-top">
+                    <span>ERROR</span>
+                    <div class="summary-icon">!</div>
+                </div>
+
+                <strong id="errorCount">1</strong>
+
+                <p>Agents requiring attention</p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= FILTER ================= -->
+        <section class="control-bar">
+
+            <div class="control-title">
+                <span class="live-indicator"></span>
+                LIVE AGENT STATUS
+            </div>
+
+            <div class="filters">
+
+                <button class="filter active" data-filter="all">
+                    All Agents
+                </button>
+
+                <button class="filter" data-filter="online">
+                    🟢 Online
+                </button>
+
+                <button class="filter" data-filter="busy">
+                    🟡 Busy
+                </button>
+
+                <button class="filter" data-filter="offline">
+                    🔴 Offline
+                </button>
+
+                <button class="filter" data-filter="error">
+                    ⚠ Error
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AGENT GRID ================= -->
+        <section class="agents-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">ACTIVE NETWORK</span>
+
+                    <h3>
+                        Agent Status Monitor
+                    </h3>
+                </div>
+
+                <span class="agent-count">
+                    07 AGENTS
+                </span>
+
+            </div>
+
+
+            <div class="agent-grid" id="agentGrid">
+
+                <!-- Agent Alpha -->
+                <article
+                    class="agent-card"
+                    data-status="online"
+                >
+
+                    <div class="agent-card-header">
+
+                        <div class="agent-avatar">
+                            A
+                        </div>
+
+                        <span class="status-badge online">
+                            <i></i>
+                            ONLINE
+                        </span>
+
+                    </div>
+
+                    <h4>Agent Alpha</h4>
+
+                    <p class="agent-role">
+                        Data Processing Agent
+                    </p>
+
+                    <div class="agent-info">
+                        <div>
+                            <span>Tasks</span>
+                            <strong>42</strong>
+                        </div>
+
+                        <div>
+                            <span>Success</span>
+                            <strong>98%</strong>
+                        </div>
+                    </div>
+
+                    <div class="activity-line">
+                        <span></span>
+                        Processing workflow
+                    </div>
+
+                </article>
+
+
+                <!-- Agent Beta -->
+                <article
+                    class="agent-card"
+                    data-status="busy"
+                >
+
+                    <div class="agent-card-header">
+
+                        <div class="agent-avatar">
+                            B
+                        </div>
+
+                        <span class="status-badge busy">
+                            <i></i>
+                            BUSY
+                        </span>
+
+                    </div>
+
+                    <h4>Agent Beta</h4>
+
+                    <p class="agent-role">
+                        Automation Agent
+                    </p>
+
+                    <div class="agent-info">
+                        <div>
+                            <span>Tasks</span>
+                            <strong>36</strong>
+                        </div>
+
+                        <div>
+                            <span>Success</span>
+                            <strong>95%</strong>
+                        </div>
+                    </div>
+
+                    <div class="activity-line">
+                        <span></span>
+                        Running automation
+                    </div>
+
+                </article>
+
+
+                <!-- Agent Gamma -->
+                <article
+                    class="agent-card"
+                    data-status="error"
+                >
+
+                    <div class="agent-card-header">
+
+                        <div class="agent-avatar">
+                            G
+                        </div>
+
+                        <span class="status-badge error">
+                            <i></i>
+                            ERROR
+                        </span>
+
+                    </div>
+
+                    <h4>Agent Gamma</h4>
+
+                    <p class="agent-role">
+                        Analysis Agent
+                    </p>
+
+                    <div class="agent-info">
+                        <div>
+                            <span>Tasks</span>
+                            <strong>29</strong>
+                        </div>
+
+                        <div>
+                            <span>Success</span>
+                            <strong>82%</strong>
+                        </div>
+                    </div>
+
+                    <div class="activity-line">
+                        <span></span>
+                        System requires attention
+                    </div>
+
+                </article>
+
+
+                <!-- Agent Delta -->
+                <article
+                    class="agent-card"
+                    data-status="online"
+                >
+
+                    <div class="agent-card-header">
+
+                        <div class="agent-avatar">
+                            D
+                        </div>
+
+                        <span class="status-badge online">
+                            <i></i>
+                            ONLINE
+                        </span>
+
+                    </div>
+
+                    <h4>Agent Delta</h4>
+
+                    <p class="agent-role">
+                        Workflow Agent
+                    </p>
+
+                    <div class="agent-info">
+                        <div>
+                            <span>Tasks</span>
+                            <strong>51</strong>
+                        </div>
+
+                        <div>
+                            <span>Success</span>
+                            <strong>99%</strong>
+                        </div>
+                    </div>
+
+                    <div class="activity-line">
+                        <span></span>
+                        Workflow completed
+                    </div>
+
+                </article>
+
+
+                <!-- Agent Sigma -->
+                <article
+                    class="agent-card"
+                    data-status="busy"
+                >
+
+                    <div class="agent-card-header">
+
+                        <div class="agent-avatar">
+                            S
+                        </div>
+
+                        <span class="status-badge busy">
+                            <i></i>
+                            BUSY
+                        </span>
+
+                    </div>
+
+                    <h4>Agent Sigma</h4>
+
+                    <p class="agent-role">
+                        Intelligence Agent
+                    </p>
+
+                    <div class="agent-info">
+                        <div>
+                            <span>Tasks</span>
+                            <strong>47</strong>
+                        </div>
+
+                        <div>
+                            <span>Success</span>
+                            <strong>96%</strong>
+                        </div>
+                    </div>
+
+                    <div class="activity-line">
+                        <span></span>
+                        Analyzing incoming data
+                    </div>
+
+                </article>
+
+
+                <!-- Agent Omega -->
+                <article
+                    class="agent-card"
+                    data-status="offline"
+                >
+
+                    <div class="agent-card-header">
+
+                        <div class="agent-avatar">
+                            O
+                        </div>
+
+                        <span class="status-badge offline">
+                            <i></i>
+                            OFFLINE
+                        </span>
+
+                    </div>
+
+                    <h4>Agent Omega</h4>
+
+                    <p class="agent-role">
+                        Security Agent
+                    </p>
+
+                    <div class="agent-info">
+                        <div>
+                            <span>Tasks</span>
+                            <strong>18</strong>
+                        </div>
+
+                        <div>
+                            <span>Success</span>
+                            <strong>91%</strong>
+                        </div>
+                    </div>
+
+                    <div class="activity-line">
+                        <span></span>
+                        Agent disconnected
+                    </div>
+
+                </article>
+
+
+                <!-- Agent Nova -->
+                <article
+                    class="agent-card"
+                    data-status="online"
+                >
+
+                    <div class="agent-card-header">
+
+                        <div class="agent-avatar">
+                            N
+                        </div>
+
+                        <span class="status-badge online">
+                            <i></i>
+                            ONLINE
+                        </span>
+
+                    </div>
+
+                    <h4>Agent Nova</h4>
+
+                    <p class="agent-role">
+                        Communication Agent
+                    </p>
+
+                    <div class="agent-info">
+                        <div>
+                            <span>Tasks</span>
+                            <strong>33</strong>
+                        </div>
+
+                        <div>
+                            <span>Success</span>
+                            <strong>97%</strong>
+                        </div>
+                    </div>
+
+                    <div class="activity-line">
+                        <span></span>
+                        Waiting for instructions
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SYSTEM FOOTER PANEL ================= -->
+        <section class="system-panel">
+
+            <div class="system-left">
+
+                <div class="system-icon">
+                    ⌁
+                </div>
+
+                <div>
+                    <span>SYSTEM MONITORING</span>
+
+                    <h3>
+                        All agent connections are being monitored
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="system-right">
+
+                <div>
+                    <span>NETWORK</span>
+                    <strong>99.8%</strong>
+                </div>
+
+                <div>
+                    <span>LATENCY</span>
+                    <strong>24ms</strong>
+                </div>
+
+                <div>
+                    <span>UPTIME</span>
+                    <strong>99.99%</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div>
+            <strong>AgentFlow</strong>
+            <span>AI Agent Management Platform</span>
+        </div>
+
+        <span>
+            AGENT STATUS MONITOR • SYSTEM ONLINE
+        </span>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

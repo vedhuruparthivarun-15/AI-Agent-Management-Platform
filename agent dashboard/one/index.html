@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AgentFlow | Command Board</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <span class="symbol">✦</span>
+
+        <span>
+            Agent<span>Flow</span>
+        </span>
+
+    </div>
+
+
+    <div class="header-center">
+
+        <span class="live-dot"></span>
+
+        COMMAND CENTER
+
+    </div>
+
+
+    <div class="header-right">
+
+        <span class="time" id="currentTime">
+            10:45:32
+        </span>
+
+        <div class="profile">
+            V
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- =====================
+         HERO
+    ====================== -->
+
+    <section class="hero">
+
+        <div>
+
+            <span class="label">
+                02 / AGENT OPERATIONS
+            </span>
+
+            <h1>
+                Command
+                <span>Board</span>
+            </h1>
+
+            <p>
+                Centralized intelligence for monitoring
+                agent deployments, tasks and execution queues.
+            </p>
+
+        </div>
+
+
+        <div class="system-core">
+
+            <div class="orbit orbit-one"></div>
+
+            <div class="orbit orbit-two"></div>
+
+            <div class="core">
+
+                <span>
+                    SYSTEM
+                </span>
+
+                <strong>
+                    98%
+                </strong>
+
+                <small>
+                    HEALTH
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================
+         COMMAND METRICS
+    ====================== -->
+
+    <section class="metrics">
+
+
+        <div class="metric-card">
+
+            <span>
+                DEPLOYED AGENTS
+            </span>
+
+            <strong>
+                12
+            </strong>
+
+            <small>
+                +2 THIS WEEK
+            </small>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <span>
+                ACTIVE PROCESSES
+            </span>
+
+            <strong>
+                08
+            </strong>
+
+            <small class="cyan">
+                LIVE
+            </small>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <span>
+                QUEUED TASKS
+            </span>
+
+            <strong>
+                16
+            </strong>
+
+            <small>
+                04 HIGH PRIORITY
+            </small>
+
+        </div>
+
+
+        <div class="metric-card">
+
+            <span>
+                FAILED TASKS
+            </span>
+
+            <strong class="red">
+                03
+            </strong>
+
+            <small class="red">
+                NEED ATTENTION
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================
+         MAIN COMMAND GRID
+    ====================== -->
+
+    <section class="command-grid">
+
+
+        <!-- AGENT DEPLOYMENTS -->
+
+        <div class="panel deployments">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span>
+                        AGENT DEPLOYMENTS
+                    </span>
+
+                    <h2>
+                        Active Operations
+                    </h2>
+
+                </div>
+
+                <button onclick="refreshAgents()">
+                    ↻
+                </button>
+
+            </div>
+
+
+            <div class="deployment">
+
+
+                <div class="deployment-number">
+                    01
+                </div>
+
+
+                <div class="deployment-info">
+
+                    <div class="deployment-title">
+
+                        <strong>
+                            Agent Alpha
+                        </strong>
+
+                        <span class="running">
+                            ● RUNNING
+                        </span>
+
+                    </div>
+
+                    <small>
+                        Data Analysis Engine
+                    </small>
+
+                    <div class="deployment-bar">
+
+                        <div
+                            class="purple-progress"
+                            style="width:86%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <strong class="percentage">
+                    86%
+                </strong>
+
+            </div>
+
+
+
+            <div class="deployment">
+
+                <div class="deployment-number">
+                    02
+                </div>
+
+
+                <div class="deployment-info">
+
+                    <div class="deployment-title">
+
+                        <strong>
+                            Agent Beta
+                        </strong>
+
+                        <span class="running">
+                            ● RUNNING
+                        </span>
+
+                    </div>
+
+                    <small>
+                        Workflow Automation
+                    </small>
+
+                    <div class="deployment-bar">
+
+                        <div
+                            class="cyan-progress"
+                            style="width:64%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <strong class="percentage">
+                    64%
+                </strong>
+
+            </div>
+
+
+
+            <div class="deployment">
+
+                <div class="deployment-number">
+                    03
+                </div>
+
+
+                <div class="deployment-info">
+
+                    <div class="deployment-title">
+
+                        <strong>
+                            Agent Gamma
+                        </strong>
+
+                        <span class="error">
+                            ● ERROR
+                        </span>
+
+                    </div>
+
+                    <small>
+                        Research Assistant
+                    </small>
+
+                    <div class="deployment-bar">
+
+                        <div
+                            class="red-progress"
+                            style="width:31%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <strong class="percentage">
+                    31%
+                </strong>
+
+            </div>
+
+
+
+            <div class="deployment">
+
+                <div class="deployment-number">
+                    04
+                </div>
+
+
+                <div class="deployment-info">
+
+                    <div class="deployment-title">
+
+                        <strong>
+                            Agent Delta
+                        </strong>
+
+                        <span class="idle">
+                            ● IDLE
+                        </span>
+
+                    </div>
+
+                    <small>
+                        Report Generator
+                    </small>
+
+                    <div class="deployment-bar">
+
+                        <div
+                            class="green-progress"
+                            style="width:94%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <strong class="percentage">
+                    94%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ACTIVITY RADAR -->
+
+        <div class="panel radar-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span>
+                        ACTIVITY RADAR
+                    </span>
+
+                    <h2>
+                        System Activity
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="radar">
+
+                <div class="radar-circle circle-one"></div>
+
+                <div class="radar-circle circle-two"></div>
+
+                <div class="radar-circle circle-three"></div>
+
+                <div class="radar-cross horizontal"></div>
+
+                <div class="radar-cross vertical"></div>
+
+
+                <span class="radar-point point-one"></span>
+                <span class="radar-point point-two"></span>
+                <span class="radar-point point-three"></span>
+                <span class="radar-point point-four"></span>
+
+
+                <div class="radar-center">
+                    <span>08</span>
+                    <small>ACTIVE</small>
+                </div>
+
+            </div>
+
+
+            <div class="radar-info">
+
+                <div>
+
+                    <span>
+                        CPU
+                    </span>
+
+                    <strong>
+                        42%
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        MEMORY
+                    </span>
+
+                    <strong>
+                        68%
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        NETWORK
+                    </span>
+
+                    <strong>
+                        31%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================
+         TASK PIPELINE
+    ====================== -->
+
+    <section class="panel pipeline-panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span>
+                    TASK PIPELINE
+                </span>
+
+                <h2>
+                    Execution Queue
+                </h2>
+
+            </div>
+
+
+            <span class="queue-count">
+                16 TASKS
+            </span>
+
+        </div>
+
+
+        <div class="pipeline">
+
+
+            <!-- QUEUED -->
+
+            <div class="pipeline-column">
+
+                <div class="column-title">
+
+                    <span>
+                        QUEUED
+                    </span>
+
+                    <strong>
+                        06
+                    </strong>
+
+                </div>
+
+
+                <div class="task-card">
+
+                    <span>
+                        TASK #108
+                    </span>
+
+                    <strong>
+                        Data Processing
+                    </strong>
+
+                    <small>
+                        Agent Sigma
+                    </small>
+
+                </div>
+
+
+                <div class="task-card">
+
+                    <span>
+                        TASK #109
+                    </span>
+
+                    <strong>
+                        Document Analysis
+                    </strong>
+
+                    <small>
+                        Agent Beta
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RUNNING -->
+
+            <div class="pipeline-column">
+
+                <div class="column-title">
+
+                    <span>
+                        RUNNING
+                    </span>
+
+                    <strong class="cyan">
+                        04
+                    </strong>
+
+                </div>
+
+
+                <div class="task-card running-card">
+
+                    <span>
+                        TASK #103
+                    </span>
+
+                    <strong>
+                        Workflow Automation
+                    </strong>
+
+                    <small>
+                        Agent Beta
+                    </small>
+
+                    <div class="tiny-progress">
+
+                        <div style="width:68%"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task-card running-card">
+
+                    <span>
+                        TASK #105
+                    </span>
+
+                    <strong>
+                        Dataset Analysis
+                    </strong>
+
+                    <small>
+                        Agent Alpha
+                    </small>
+
+                    <div class="tiny-progress">
+
+                        <div style="width:42%"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPLETED -->
+
+            <div class="pipeline-column">
+
+                <div class="column-title">
+
+                    <span>
+                        COMPLETED
+                    </span>
+
+                    <strong class="green">
+                        06
+                    </strong>
+
+                </div>
+
+
+                <div class="task-card completed-card">
+
+                    <span>
+                        TASK #102
+                    </span>
+
+                    <strong>
+                        Research Analysis
+                    </strong>
+
+                    <small>
+                        Agent Alpha
+                    </small>
+
+                </div>
+
+
+                <div class="task-card completed-card">
+
+                    <span>
+                        TASK #101
+                    </span>
+
+                    <strong>
+                        Report Generation
+                    </strong>
+
+                    <small>
+                        Agent Delta
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================
+         ALERT STRIP
+    ====================== -->
+
+    <section class="alerts">
+
+        <div class="alert-title">
+
+            <span>
+                SYSTEM ALERTS
+            </span>
+
+            <strong>
+                03
+            </strong>
+
+        </div>
+
+
+        <div class="alert-item error-alert">
+
+            <span>
+                !
+            </span>
+
+            <div>
+
+                <strong>
+                    Agent Gamma execution failed
+                </strong>
+
+                <small>
+                    Task #098 requires manual review
+                </small>
+
+            </div>
+
+            <time>
+                2m ago
+            </time>
+
+        </div>
+
+
+        <div class="alert-item warning-alert">
+
+            <span>
+                !
+            </span>
+
+            <div>
+
+                <strong>
+                    Task queue approaching limit
+                </strong>
+
+                <small>
+                    Current queue utilization is 82%
+                </small>
+
+            </div>
+
+            <time>
+                7m ago
+            </time>
+
+        </div>
+
+
+        <div class="alert-item success-alert">
+
+            <span>
+                ✓
+            </span>
+
+            <div>
+
+                <strong>
+                    Agent Delta completed workflow
+                </strong>
+
+                <small>
+                    Report generation finished successfully
+                </small>
+
+            </div>
+
+            <time>
+                11m ago
+            </time>
+
+        </div>
+
+    </section>
+
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        ✦ AgentFlow
+    </strong>
+
+    <span>
+        AI AGENT DASHBOARD · TEMPLATE 02
+    </span>
+
+    <span>
+        SYSTEM UPTIME 99.98%
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

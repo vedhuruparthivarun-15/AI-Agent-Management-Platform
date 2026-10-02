@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agent Activity Log | Template 01</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <h2>AgentFlow</h2>
+
+                <span>
+                    ACTIVITY MONITOR
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="system">
+
+            <span class="dot"></span>
+
+            SYSTEM ONLINE
+
+        </div>
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <span class="label">
+            01 / ACTIVITY LOG
+        </span>
+
+        <h1>
+            Agent Activity
+            <span>Timeline</span>
+        </h1>
+
+        <p>
+            Monitor recent events, task executions and
+            status changes across all active AI agents.
+        </p>
+
+    </section>
+
+
+
+    <!-- SUMMARY -->
+
+    <section class="summary">
+
+        <div class="summary-card">
+
+            <span>
+                TOTAL EVENTS
+            </span>
+
+            <strong id="totalEvents">
+                24
+            </strong>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <span>
+                ACTIVE AGENTS
+            </span>
+
+            <strong>
+                08
+            </strong>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <span>
+                COMPLETED
+            </span>
+
+            <strong class="green">
+                18
+            </strong>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <span>
+                ERRORS
+            </span>
+
+            <strong class="red">
+                02
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ACTIVITY -->
+
+    <section class="activity-box">
+
+
+        <div class="activity-header">
+
+            <div>
+
+                <span>
+                    LIVE STREAM
+                </span>
+
+                <h2>
+                    Recent Activity
+                </h2>
+
+            </div>
+
+
+            <button onclick="refreshActivity()">
+                ↻ Refresh
+            </button>
+
+        </div>
+
+
+
+        <div class="timeline">
+
+
+            <!-- EVENT 01 -->
+
+            <div class="event completed">
+
+                <div class="event-time">
+                    10:30 AM
+                </div>
+
+                <div class="timeline-line">
+
+                    <span></span>
+
+                </div>
+
+                <div class="event-card">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            TASK COMPLETED
+                        </span>
+
+                        <span class="event-number">
+                            #001
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Agent Alpha completed Task #102
+                    </h3>
+
+                    <p>
+                        The assigned data processing task
+                        was successfully completed.
+                    </p>
+
+                    <div class="event-footer">
+
+                        <span>
+                            Agent Alpha
+                        </span>
+
+                        <span class="success">
+                            ● Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EVENT 02 -->
+
+            <div class="event started">
+
+                <div class="event-time">
+                    10:32 AM
+                </div>
+
+                <div class="timeline-line">
+
+                    <span></span>
+
+                </div>
+
+                <div class="event-card">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            TASK STARTED
+                        </span>
+
+                        <span class="event-number">
+                            #002
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Agent Beta started Task #103
+                    </h3>
+
+                    <p>
+                        A new analytics task has been
+                        assigned to Agent Beta.
+                    </p>
+
+                    <div class="event-footer">
+
+                        <span>
+                            Agent Beta
+                        </span>
+
+                        <span class="running">
+                            ● Running
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EVENT 03 -->
+
+            <div class="event error">
+
+                <div class="event-time">
+                    10:35 AM
+                </div>
+
+                <div class="timeline-line">
+
+                    <span></span>
+
+                </div>
+
+                <div class="event-card">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            SYSTEM ERROR
+                        </span>
+
+                        <span class="event-number">
+                            #003
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Agent Gamma encountered an error
+                    </h3>
+
+                    <p>
+                        The agent stopped processing because
+                        an unexpected execution error occurred.
+                    </p>
+
+                    <div class="event-footer">
+
+                        <span>
+                            Agent Gamma
+                        </span>
+
+                        <span class="danger">
+                            ● Error
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EVENT 04 -->
+
+            <div class="event active">
+
+                <div class="event-time">
+                    10:38 AM
+                </div>
+
+                <div class="timeline-line">
+
+                    <span></span>
+
+                </div>
+
+                <div class="event-card">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            STATUS CHANGE
+                        </span>
+
+                        <span class="event-number">
+                            #004
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Agent Alpha became active
+                    </h3>
+
+                    <p>
+                        Agent Alpha is now available and
+                        ready to process new tasks.
+                    </p>
+
+                    <div class="event-footer">
+
+                        <span>
+                            Agent Alpha
+                        </span>
+
+                        <span class="active-text">
+                            ● Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EVENT 05 -->
+
+            <div class="event completed">
+
+                <div class="event-time">
+                    10:41 AM
+                </div>
+
+                <div class="timeline-line">
+
+                    <span></span>
+
+                </div>
+
+                <div class="event-card">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            TASK COMPLETED
+                        </span>
+
+                        <span class="event-number">
+                            #005
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Agent Delta completed Task #104
+                    </h3>
+
+                    <p>
+                        Report generation completed
+                        successfully.
+                    </p>
+
+                    <div class="event-footer">
+
+                        <span>
+                            Agent Delta
+                        </span>
+
+                        <span class="success">
+                            ● Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EVENT 06 -->
+
+            <div class="event started">
+
+                <div class="event-time">
+                    10:44 AM
+                </div>
+
+                <div class="timeline-line">
+
+                    <span></span>
+
+                </div>
+
+                <div class="event-card">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            TASK STARTED
+                        </span>
+
+                        <span class="event-number">
+                            #006
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Agent Beta started Task #105
+                    </h3>
+
+                    <p>
+                        Agent Beta started a new
+                        data analysis operation.
+                    </p>
+
+                    <div class="event-footer">
+
+                        <span>
+                            Agent Beta
+                        </span>
+
+                        <span class="running">
+                            ● Running
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <strong>
+            ✦ AgentFlow
+        </strong>
+
+        <span>
+            AI AGENT ACTIVITY LOG
+        </span>
+
+        <span>
+            TEMPLATE 01 · 2026
+        </span>
+
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

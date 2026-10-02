@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentFlow | Agent Intelligence</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+
+<!-- TOP NAVIGATION -->
+<header class="topbar">
+
+    <div class="logo">
+        <div class="logo-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div>
+            <h2>AgentFlow</h2>
+            <small>AI AGENT PLATFORM</small>
+        </div>
+    </div>
+
+    <div class="page-title">
+        <span>INTELLIGENCE CENTER</span>
+    </div>
+
+    <div class="top-actions">
+        <div class="live-status">
+            <span></span>
+            SYSTEM ONLINE
+        </div>
+
+        <button class="icon-btn">⌕</button>
+        <button class="icon-btn">🔔</button>
+
+        <div class="profile">
+            <div class="avatar">AD</div>
+            <div>
+                <strong>Admin</strong>
+                <small>Administrator</small>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+<!-- MAIN -->
+<main class="dashboard">
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div>
+            <p class="eyebrow">AGENT INTELLIGENCE / 03</p>
+
+            <h1>
+                Agent
+                <span>Intelligence</span>
+            </h1>
+
+            <p class="hero-text">
+                Monitor agent performance, workload distribution,
+                execution health and system intelligence from one place.
+            </p>
+        </div>
+
+        <div class="hero-actions">
+            <button class="secondary-btn" onclick="refreshData()">
+                ↻ Refresh Data
+            </button>
+
+            <button class="primary-btn">
+                + Deploy Agent
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- KPI STRIP -->
+    <section class="kpi-strip">
+
+        <div class="kpi">
+            <span class="kpi-label">TOTAL AGENTS</span>
+            <strong>12</strong>
+            <small class="positive">+2 this month</small>
+        </div>
+
+        <div class="kpi">
+            <span class="kpi-label">ACTIVE AGENTS</span>
+            <strong>08</strong>
+            <small class="positive">66.7% active</small>
+        </div>
+
+        <div class="kpi">
+            <span class="kpi-label">TASK EXECUTIONS</span>
+            <strong>1,284</strong>
+            <small class="positive">+18.4%</small>
+        </div>
+
+        <div class="kpi">
+            <span class="kpi-label">SUCCESS RATE</span>
+            <strong>98.4%</strong>
+            <small class="positive">Stable</small>
+        </div>
+
+    </section>
+
+
+    <!-- INTELLIGENCE GRID -->
+    <section class="intelligence-grid">
+
+        <!-- PERFORMANCE -->
+        <div class="panel performance-panel">
+
+            <div class="panel-header">
+                <div>
+                    <span class="panel-tag">SYSTEM PERFORMANCE</span>
+                    <h2>Execution Intelligence</h2>
+                </div>
+
+                <select id="periodSelect">
+                    <option>Last 7 Days</option>
+                    <option>Last 30 Days</option>
+                    <option>Last 90 Days</option>
+                </select>
+            </div>
+
+            <div class="performance-content">
+
+                <div class="big-number">
+                    <strong>98.4%</strong>
+                    <span>Overall Efficiency</span>
+
+                    <div class="trend">
+                        ↑ 12.8%
+                    </div>
+                </div>
+
+                <div class="chart">
+
+                    <div class="chart-line line-one"></div>
+                    <div class="chart-line line-two"></div>
+
+                    <div class="chart-point p1"></div>
+                    <div class="chart-point p2"></div>
+                    <div class="chart-point p3"></div>
+                    <div class="chart-point p4"></div>
+                    <div class="chart-point p5"></div>
+                    <div class="chart-point p6"></div>
+                    <div class="chart-point p7"></div>
+
+                    <div class="chart-bars">
+                        <span style="height:35%"></span>
+                        <span style="height:50%"></span>
+                        <span style="height:42%"></span>
+                        <span style="height:65%"></span>
+                        <span style="height:58%"></span>
+                        <span style="height:78%"></span>
+                        <span style="height:88%"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="chart-labels">
+                <span>MON</span>
+                <span>TUE</span>
+                <span>WED</span>
+                <span>THU</span>
+                <span>FRI</span>
+                <span>SAT</span>
+                <span>SUN</span>
+            </div>
+
+        </div>
+
+
+        <!-- SYSTEM HEALTH -->
+        <div class="panel health-panel">
+
+            <div class="panel-header">
+                <div>
+                    <span class="panel-tag">SYSTEM HEALTH</span>
+                    <h2>Core Status</h2>
+                </div>
+
+                <span class="status-dot">LIVE</span>
+            </div>
+
+            <div class="health-circle">
+
+                <div class="circle-inner">
+                    <strong>98%</strong>
+                    <span>HEALTH</span>
+                </div>
+
+            </div>
+
+            <div class="health-info">
+
+                <div>
+                    <span>CPU</span>
+                    <strong>42%</strong>
+                </div>
+
+                <div>
+                    <span>MEMORY</span>
+                    <strong>61%</strong>
+                </div>
+
+                <div>
+                    <span>NETWORK</span>
+                    <strong>24ms</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- AGENT DISTRIBUTION -->
+        <div class="panel distribution-panel">
+
+            <div class="panel-header">
+                <div>
+                    <span class="panel-tag">AGENT DISTRIBUTION</span>
+                    <h2>Workload Allocation</h2>
+                </div>
+            </div>
+
+            <div class="distribution">
+
+                <div class="donut">
+                    <div>
+                        <strong>12</strong>
+                        <span>AGENTS</span>
+                    </div>
+                </div>
+
+                <div class="legend">
+
+                    <div>
+                        <span class="legend-dot purple"></span>
+                        <p>Production</p>
+                        <strong>42%</strong>
+                    </div>
+
+                    <div>
+                        <span class="legend-dot cyan"></span>
+                        <p>Testing</p>
+                        <strong>28%</strong>
+                    </div>
+
+                    <div>
+                        <span class="legend-dot green"></span>
+                        <p>Automation</p>
+                        <strong>20%</strong>
+                    </div>
+
+                    <div>
+                        <span class="legend-dot red"></span>
+                        <p>Idle</p>
+                        <strong>10%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TASK ANALYTICS -->
+        <div class="panel task-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <span class="panel-tag">TASK ANALYTICS</span>
+                    <h2>Execution Breakdown</h2>
+                </div>
+
+                <span class="total-task">1,284 TOTAL</span>
+
+            </div>
+
+            <div class="task-bars">
+
+                <div class="task-row">
+                    <div>
+                        <span>Completed</span>
+                        <strong>842</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:86%"></span>
+                    </div>
+                </div>
+
+                <div class="task-row">
+                    <div>
+                        <span>Running</span>
+                        <strong>286</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:61%"></span>
+                    </div>
+                </div>
+
+                <div class="task-row">
+                    <div>
+                        <span>Queued</span>
+                        <strong>118</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:35%"></span>
+                    </div>
+                </div>
+
+                <div class="task-row">
+                    <div>
+                        <span>Failed</span>
+                        <strong>38</strong>
+                    </div>
+
+                    <div class="progress error">
+                        <span style="width:14%"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AGENT INTELLIGENCE TABLE -->
+    <section class="panel agents-panel">
+
+        <div class="panel-header">
+
+            <div>
+                <span class="panel-tag">AGENT INTELLIGENCE</span>
+                <h2>Agent Performance</h2>
+            </div>
+
+            <button class="text-btn">
+                View All →
+            </button>
+
+        </div>
+
+        <div class="agent-table">
+
+            <div class="table-head">
+                <span>AGENT</span>
+                <span>STATUS</span>
+                <span>TASKS</span>
+                <span>SUCCESS</span>
+                <span>EFFICIENCY</span>
+            </div>
+
+            <div class="agent-row">
+
+                <div class="agent-name">
+                    <div class="agent-icon">A</div>
+
+                    <div>
+                        <strong>Agent Alpha</strong>
+                        <small>Production Agent</small>
+                    </div>
+                </div>
+
+                <span class="online">ONLINE</span>
+                <strong>284</strong>
+                <strong>99.2%</strong>
+
+                <div class="mini-progress">
+                    <span style="width:94%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-row">
+
+                <div class="agent-name">
+                    <div class="agent-icon">B</div>
+
+                    <div>
+                        <strong>Agent Beta</strong>
+                        <small>Automation Agent</small>
+                    </div>
+                </div>
+
+                <span class="online">ONLINE</span>
+                <strong>238</strong>
+                <strong>98.7%</strong>
+
+                <div class="mini-progress">
+                    <span style="width:89%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-row">
+
+                <div class="agent-name">
+                    <div class="agent-icon">G</div>
+
+                    <div>
+                        <strong>Agent Gamma</strong>
+                        <small>Data Agent</small>
+                    </div>
+                </div>
+
+                <span class="warning">BUSY</span>
+                <strong>196</strong>
+                <strong>97.8%</strong>
+
+                <div class="mini-progress">
+                    <span style="width:82%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="agent-row">
+
+                <div class="agent-name">
+                    <div class="agent-icon">D</div>
+
+                    <div>
+                        <strong>Agent Delta</strong>
+                        <small>Workflow Agent</small>
+                    </div>
+                </div>
+
+                <span class="online">ONLINE</span>
+                <strong>174</strong>
+                <strong>99.5%</strong>
+
+                <div class="mini-progress">
+                    <span style="width:97%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LIVE SIGNALS -->
+    <section class="signals">
+
+        <div class="signal-title">
+            <span class="signal-pulse"></span>
+            LIVE SYSTEM SIGNALS
+        </div>
+
+        <div class="signal">
+
+            <span class="signal-time">12:41:09</span>
+
+            <span class="signal-agent">AGENT ALPHA</span>
+
+            <span>
+                Completed automated workflow
+            </span>
+
+            <b class="success">SUCCESS</b>
+
+        </div>
+
+        <div class="signal">
+
+            <span class="signal-time">12:40:52</span>
+
+            <span class="signal-agent">AGENT BETA</span>
+
+            <span>
+                Started data processing task
+            </span>
+
+            <b class="running">RUNNING</b>
+
+        </div>
+
+        <div class="signal">
+
+            <span class="signal-time">12:40:17</span>
+
+            <span class="signal-agent">AGENT GAMMA</span>
+
+            <span>
+                Memory optimization completed
+            </span>
+
+            <b class="success">SUCCESS</b>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div>
+            AgentFlow Intelligence Center
+        </div>
+
+        <div>
+            <span></span>
+            All systems operational
+        </div>
+
+    </footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
