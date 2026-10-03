@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Review Workflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Human Review</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>AGENT CONTROL</p>
+            <h1>Human Review Workflow</h1>
+            <h3>Review the AI decision before it is executed.</h3>
+        </section>
+
+        <section class="card">
+
+            <div class="task">
+                <span>REVIEW REQUIRED</span>
+                <h2>Send Customer Email</h2>
+                <p>
+                    The AI agent has prepared an email and
+                    requires human approval before sending it.
+                </p>
+            </div>
+
+            <div class="message">
+                <h3>AI Recommendation</h3>
+                <p>
+                    Send the prepared email to the customer
+                    regarding their recent support request.
+                </p>
+            </div>
+
+            <div class="status">
+                <div>
+                    <small>Agent</small>
+                    <strong>Support Agent</strong>
+                </div>
+
+                <div>
+                    <small>Decision</small>
+                    <strong id="decision">Waiting</strong>
+                </div>
+            </div>
+
+            <div class="buttons">
+
+                <button class="approve" onclick="approveDecision()">
+                    Approve
+                </button>
+
+                <button class="reject" onclick="rejectDecision()">
+                    Reject
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

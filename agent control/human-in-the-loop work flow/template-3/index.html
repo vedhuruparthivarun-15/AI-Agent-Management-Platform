@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Human Checkpoint</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Human Checkpoint</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>AGENT CONTROL</p>
+            <h1>Human Checkpoint</h1>
+            <h3>The AI workflow is paused for human verification.</h3>
+        </section>
+
+        <section class="card">
+
+            <div class="checkpoint">
+                <div class="icon">!</div>
+
+                <div>
+                    <h2>Verification Required</h2>
+                    <p>AI Agent is waiting for human confirmation.</p>
+                </div>
+            </div>
+
+            <div class="workflow">
+
+                <div class="item done">
+                    <span>✓</span>
+                    <div>
+                        <h3>Data Collection</h3>
+                        <p>Completed by AI agent.</p>
+                    </div>
+                </div>
+
+                <div class="item active">
+                    <span>2</span>
+                    <div>
+                        <h3>Human Verification</h3>
+                        <p id="message">Waiting for your decision.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>3</span>
+                    <div>
+                        <h3>Final Processing</h3>
+                        <p>Will start after verification.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="approve" onclick="verify()">
+                    Verify & Continue
+                </button>
+
+                <button class="reject" onclick="stopWorkflow()">
+                    Stop Workflow
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

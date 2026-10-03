@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Approval Request</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Human Approval</span>
+    </header>
+
+    <main>
+
+        <div class="title">
+            <p>AGENT CONTROL</p>
+            <h1>Approval Request</h1>
+            <h3>Review and approve the agent's next action.</h3>
+        </div>
+
+        <div class="card">
+
+            <div class="agent">
+                <div class="icon">AI</div>
+
+                <div>
+                    <h2>Research Agent</h2>
+                    <p>Waiting for your approval</p>
+                </div>
+            </div>
+
+            <div class="task">
+                <h3>Requested Action</h3>
+
+                <p>
+                    Search for the latest market information
+                    and prepare a summary report.
+                </p>
+            </div>
+
+            <div class="info">
+
+                <div>
+                    <small>Task ID</small>
+                    <strong>#AG1024</strong>
+                </div>
+
+                <div>
+                    <small>Priority</small>
+                    <strong>High</strong>
+                </div>
+
+                <div>
+                    <small>Status</small>
+                    <strong id="status">Pending</strong>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="approve" onclick="approve()">
+                    Approve Action
+                </button>
+
+                <button class="reject" onclick="reject()">
+                    Reject Action
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

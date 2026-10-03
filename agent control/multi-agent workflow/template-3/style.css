@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b14;
+    color: white;
+}
+
+header {
+    height: 70px;
+    padding: 0 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #292f42;
+}
+
+header span {
+    color: #8072ff;
+}
+
+main {
+    width: 85%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 45px;
+}
+
+.hero p {
+    color: #8072ff;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.hero h3 {
+    color: #858da4;
+    font-weight: normal;
+}
+
+.card {
+    background: #101522;
+    border: 1px solid #30384f;
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 25px;
+    border-bottom: 1px solid #292f42;
+}
+
+.task-header span {
+    color: #8072ff;
+    font-size: 13px;
+}
+
+.tasks {
+    padding: 20px 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 20px 0;
+    border-bottom: 1px solid #292f42;
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background: #8072ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.task p {
+    color: #858da4;
+    margin-top: 6px;
+}
+
+.task strong {
+    margin-left: auto;
+    font-size: 13px;
+}
+
+.done {
+    color: #27ae78;
+}
+
+.working {
+    color: #8072ff;
+}
+
+.waiting {
+    color: #ffc857;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #8072ff;
+    color: white;
+
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+footer {
+    margin-top: 70px;
+    padding: 25px;
+
+    text-align: center;
+    color: #596176;
+
+    border-top: 1px solid #292f42;
+}
+
+@media (max-width: 600px) {
+
+    .task {
+        flex-wrap: wrap;
+    }
+
+    .task strong {
+        margin-left: 58px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
