@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multi-agent Workflow</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Multi-agent Workflow</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>AGENT CONTROL</p>
+            <h1>Multi-agent Workflow</h1>
+            <h3>Multiple AI agents work together to complete a task.</h3>
+        </section>
+
+        <section class="workflow">
+
+            <div class="agent">
+                <div class="icon">A1</div>
+
+                <div>
+                    <h3>Research Agent</h3>
+                    <p>Collects information and prepares research.</p>
+                </div>
+
+                <span class="status">Completed</span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="agent">
+                <div class="icon">A2</div>
+
+                <div>
+                    <h3>Analysis Agent</h3>
+                    <p>Analyzes the information provided by Agent 1.</p>
+                </div>
+
+                <span class="status active">Working</span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="agent">
+                <div class="icon">A3</div>
+
+                <div>
+                    <h3>Report Agent</h3>
+                    <p>Creates the final report from the analysis.</p>
+                </div>
+
+                <span class="status waiting">Waiting</span>
+            </div>
+
+            <button onclick="startWorkflow()">
+                Start Workflow
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Human-in-the-loop Workflow</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Human-in-the-loop</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>AGENT CONTROL</p>
+            <h1>Human-in-the-loop Workflow</h1>
+            <h3>Human review is required before the agent continues.</h3>
+        </section>
+
+        <section class="workflow">
+
+            <div class="step completed">
+                <div class="number">1</div>
+                <div>
+                    <h3>AI Agent Task</h3>
+                    <p>Agent completed the requested task.</p>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step active">
+                <div class="number">2</div>
+                <div>
+                    <h3>Human Review</h3>
+                    <p id="reviewText">Waiting for human decision.</p>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="number">3</div>
+                <div>
+                    <h3>Continue Workflow</h3>
+                    <p>Agent continues after approval.</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+
+                <button class="approve" onclick="approveWorkflow()">
+                    Approve & Continue
+                </button>
+
+                <button class="reject" onclick="rejectWorkflow()">
+                    Reject & Stop
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

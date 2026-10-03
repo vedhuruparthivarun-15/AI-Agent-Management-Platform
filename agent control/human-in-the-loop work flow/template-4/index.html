@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Human Approval Gate</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Approval Gate</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>AGENT CONTROL</p>
+            <h1>Human Approval Gate</h1>
+            <h3>AI execution is paused until a human makes a decision.</h3>
+        </section>
+
+        <section class="card">
+
+            <div class="header">
+                <div class="icon">AI</div>
+
+                <div>
+                    <h2>Automation Agent</h2>
+                    <p>Paused at human approval gate</p>
+                </div>
+            </div>
+
+            <div class="action">
+                <small>NEXT AI ACTION</small>
+
+                <h3>Execute Automated Task</h3>
+
+                <p>
+                    The agent is ready to execute the next task.
+                    Human approval is required before execution.
+                </p>
+            </div>
+
+            <div class="progress">
+
+                <div class="step completed">
+                    <span>✓</span>
+                    <p>AI Task</p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step current">
+                    <span>2</span>
+                    <p>Human Approval</p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step">
+                    <span>3</span>
+                    <p>Execution</p>
+                </div>
+
+            </div>
+
+            <div class="result">
+                <small>WORKFLOW STATUS</small>
+                <strong id="status">Waiting for approval</strong>
+            </div>
+
+            <div class="buttons">
+
+                <button class="approve" onclick="approve()">
+                    Approve & Execute
+                </button>
+
+                <button class="reject" onclick="reject()">
+                    Reject Task
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

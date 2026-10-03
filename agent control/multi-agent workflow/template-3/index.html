@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multi-agent Task Flow</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Task Coordination</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>AGENT CONTROL</p>
+            <h1>Multi-agent Task Flow</h1>
+            <h3>Different agents handle different parts of the same workflow.</h3>
+        </section>
+
+        <section class="card">
+
+            <div class="task-header">
+                <h2>Customer Analysis</h2>
+                <span id="overallStatus">In Progress</span>
+            </div>
+
+            <div class="tasks">
+
+                <div class="task">
+                    <div class="number">1</div>
+
+                    <div>
+                        <h3>Data Agent</h3>
+                        <p>Collect customer information.</p>
+                    </div>
+
+                    <strong class="done">Done</strong>
+                </div>
+
+                <div class="task">
+                    <div class="number">2</div>
+
+                    <div>
+                        <h3>Analysis Agent</h3>
+                        <p>Analyze the collected information.</p>
+                    </div>
+
+                    <strong class="working">Working</strong>
+                </div>
+
+                <div class="task">
+                    <div class="number">3</div>
+
+                    <div>
+                        <h3>Report Agent</h3>
+                        <p>Create the final analysis report.</p>
+                    </div>
+
+                    <strong class="waiting">Waiting</strong>
+                </div>
+
+            </div>
+
+            <button onclick="completeWorkflow()">
+                Complete Workflow
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

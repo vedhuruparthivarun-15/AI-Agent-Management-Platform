@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b14;
+    color: white;
+}
+
+header {
+    height: 70px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292f42;
+}
+
+header span {
+    color: #8072ff;
+}
+
+main {
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 45px;
+}
+
+.hero p {
+    color: #8072ff;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.hero h3 {
+    color: #858da4;
+    font-weight: normal;
+}
+
+.card {
+    background: #101522;
+    border: 1px solid #30384f;
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #292f42;
+}
+
+.icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: #8072ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.header p {
+    color: #858da4;
+    margin-top: 6px;
+}
+
+.action {
+    margin: 25px 0;
+    padding: 22px;
+    background: #080b14;
+    border-radius: 8px;
+}
+
+.action small,
+.result small {
+    color: #8072ff;
+    letter-spacing: 1px;
+}
+
+.action h3 {
+    margin: 12px 0;
+}
+
+.action p {
+    color: #858da4;
+    line-height: 1.6;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.step {
+    text-align: center;
+}
+
+.step span {
+    width: 38px;
+    height: 38px;
+    margin: auto;
+    border-radius: 50%;
+    background: #30384f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.step.completed span {
+    background: #27ae78;
+}
+
+.step.current span {
+    background: #8072ff;
+}
+
+.step p {
+    margin-top: 8px;
+    color: #858da4;
+    font-size: 13px;
+}
+
+.line {
+    width: 70px;
+    height: 2px;
+    background: #30384f;
+}
+
+.result {
+    padding: 20px 0;
+    border-top: 1px solid #292f42;
+}
+
+.result strong {
+    display: block;
+    margin-top: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.approve {
+    background: #27ae78;
+}
+
+.reject {
+    background: #d9534f;
+}
+
+.approve:hover {
+    background: #208f63;
+}
+
+.reject:hover {
+    background: #b9403c;
+}
+
+footer {
+    margin-top: 70px;
+    padding: 25px;
+    text-align: center;
+    color: #596176;
+    border-top: 1px solid #292f42;
+}
+
+@media (max-width: 650px) {
+
+    .progress {
+        flex-direction: column;
+    }
+
+    .line {
+        width: 2px;
+        height: 30px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}

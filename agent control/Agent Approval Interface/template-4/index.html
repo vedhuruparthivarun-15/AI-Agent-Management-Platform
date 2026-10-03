@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final Agent Approval</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Final Approval</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>AGENT CONTROL</p>
+            <h1>Final Approval</h1>
+            <h3>Give human approval before the AI agent continues.</h3>
+        </section>
+
+        <section class="approval">
+
+            <div class="heading">
+                <div class="agent-icon">AI</div>
+
+                <div>
+                    <h2>Data Analysis Agent</h2>
+                    <p>Action requires your approval</p>
+                </div>
+            </div>
+
+            <div class="action-box">
+                <small>PROPOSED ACTION</small>
+
+                <h3>Generate Customer Analysis</h3>
+
+                <p>
+                    The agent wants to analyze customer data
+                    and generate a performance report.
+                </p>
+            </div>
+
+            <div class="status-row">
+
+                <div>
+                    <span>Agent</span>
+                    <strong>Data Analysis Agent</strong>
+                </div>
+
+                <div>
+                    <span>Action</span>
+                    <strong>Generate Report</strong>
+                </div>
+
+                <div>
+                    <span>Status</span>
+                    <strong id="status">Pending</strong>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="approve" onclick="approveAction()">
+                    ✓ Approve
+                </button>
+
+                <button class="reject" onclick="rejectAction()">
+                    ✕ Reject
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

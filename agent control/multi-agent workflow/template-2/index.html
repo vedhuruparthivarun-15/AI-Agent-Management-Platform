@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agent Collaboration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AgentFlow</h2>
+        <span>Agent Collaboration</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>AGENT CONTROL</p>
+            <h1>Agent Collaboration</h1>
+            <h3>AI agents communicate and share tasks with each other.</h3>
+        </section>
+
+        <section class="card">
+
+            <div class="agent">
+                <div class="icon">A1</div>
+
+                <div class="content">
+                    <h2>Planning Agent</h2>
+                    <p>Creates the plan for the task.</p>
+                </div>
+
+                <span class="badge">Completed</span>
+            </div>
+
+            <div class="connection">↓</div>
+
+            <div class="agent">
+                <div class="icon">A2</div>
+
+                <div class="content">
+                    <h2>Execution Agent</h2>
+                    <p>Performs the planned actions.</p>
+                </div>
+
+                <span class="badge working">Working</span>
+            </div>
+
+            <div class="connection">↓</div>
+
+            <div class="agent">
+                <div class="icon">A3</div>
+
+                <div class="content">
+                    <h2>Review Agent</h2>
+                    <p>Checks the final result.</p>
+                </div>
+
+                <span class="badge waiting">Waiting</span>
+            </div>
+
+            <button onclick="runCollaboration()">
+                Run Collaboration
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        AgentFlow - AI Agent Management Platform
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
