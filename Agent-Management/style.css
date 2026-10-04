@@ -1,0 +1,395 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0b1120;
+    --surface: #151e30;
+    --surface-light: #1e293b;
+    --border: #2d3a50;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --success: #22c55e;
+    --danger: #ef4444;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header p {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 16px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+.nav-btn {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid transparent;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #25264f;
+    color: #a5b4fc;
+    border-color: #4546a5;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    min-height: 450px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+h2 {
+    color: #c7d2fe;
+    margin-bottom: 22px;
+}
+
+h3 {
+    color: #e2e8f0;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ===== DASHBOARD CARDS ===== */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 5px 18px #00000020;
+}
+
+.stat-card h3 {
+    color: #818cf8;
+    font-size: 32px;
+    margin: 0;
+}
+
+.stat-card p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+/* ===== SEARCH AND TOOLBAR ===== */
+.toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+input:not([type="checkbox"]):not([type="range"]),
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 7px 0 16px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font: inherit;
+    color: var(--text);
+    background: #0f172a;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px #6366f120;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #64748b;
+}
+
+.toolbar input {
+    margin: 0;
+    flex: 1;
+}
+
+/* ===== FORMS AND PANELS ===== */
+.panel,
+.profile-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 18px #00000015;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #cbd5e1;
+    margin-top: 10px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.secondary {
+    background: #475569;
+}
+
+.secondary:hover {
+    background: #334155;
+}
+
+/* ===== AGENT TABLE ===== */
+.table-wrapper {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--surface-light);
+    color: #c7d2fe;
+    font-weight: 600;
+}
+
+td {
+    color: #cbd5e1;
+}
+
+tbody tr:hover {
+    background: #1c2940;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== STATUS LABELS ===== */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.active {
+    background: #123b2a;
+    color: #4ade80;
+    border: 1px solid #166534;
+}
+
+.status.inactive {
+    background: #451a1a;
+    color: #fca5a5;
+    border: 1px solid #991b1b;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-btn {
+    padding: 7px 10px;
+    margin: 2px;
+    font-size: 12px;
+}
+
+.view-btn {
+    background: #0f766e;
+}
+
+.view-btn:hover {
+    background: #115e59;
+}
+
+.edit-btn {
+    background: #b45309;
+}
+
+.edit-btn:hover {
+    background: #92400e;
+}
+
+.delete-btn {
+    background: #b91c1c;
+}
+
+.delete-btn:hover {
+    background: #991b1b;
+}
+
+/* ===== PERMISSIONS ===== */
+.check-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+    font-weight: normal;
+    color: var(--text);
+}
+
+.check-label input {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--primary);
+}
+
+/* ===== PROFILE ===== */
+.profile-card h3 {
+    color: #a5b4fc;
+    font-size: 24px;
+}
+
+.profile-card p {
+    color: #cbd5e1;
+    overflow-wrap: anywhere;
+}
+
+.profile-card strong {
+    color: #f1f5f9;
+}
+
+/* ===== MESSAGES ===== */
+.message {
+    color: #4ade80;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 30px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    .nav-btn {
+        flex: 1 1 40%;
+    }
+
+    .panel,
+    .profile-card {
+        padding: 16px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .action-btn {
+        margin: 3px 0;
+    }
+}
