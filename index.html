@@ -4,15 +4,35 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AgentFlow | AI Agent Management Platform</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="AgentFlow AI Agent Management Platform"
+    >
+
+    <title>
+        AgentFlow | AI Agent Management Platform
+    </title>
+
+
+    <!-- GOOGLE FONT -->
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
+    >
+
+
+    <!-- MAIN CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
     >
 
 </head>
@@ -21,62 +41,149 @@
 <body>
 
 
-<!-- BACKGROUND -->
+<!-- =====================================================
+     PAGE LOADER
+     ===================================================== -->
 
-<div class="background-grid"></div>
+<div
+    class="page-loader"
+    id="pageLoader"
+>
 
-<div class="cursor-glow"></div>
+    <div class="loader-core">
 
+        <div class="loader-ring"></div>
 
-
-<!-- NAVBAR -->
-
-<header class="navbar">
-
-    <div class="logo">
-
-        <span class="logo-symbol">✦</span>
+        <div class="loader-ring ring-two"></div>
 
         <span>
-            Agent<span>Flow</span>
+            AI
         </span>
 
     </div>
 
+    <p>
+        INITIALIZING AGENTFLOW...
+    </p>
 
-    <nav>
+</div>
 
-        <a href="#home">
+
+
+<!-- =====================================================
+     BACKGROUND
+     ===================================================== -->
+
+<div class="background-grid"></div>
+
+<canvas
+    id="particleCanvas"
+></canvas>
+
+<div class="ambient ambient-one"></div>
+
+<div class="ambient ambient-two"></div>
+
+<div class="ambient ambient-three"></div>
+
+
+<div
+    class="cursor-glow"
+    id="cursorGlow"
+></div>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<header
+    class="navbar"
+    id="navbar"
+>
+
+
+    <a
+        href="#home"
+        class="brand"
+    >
+
+        <span class="brand-mark">
+
+            ✦
+
+        </span>
+
+
+        <span>
+
+            Agent<span>Flow</span>
+
+        </span>
+
+    </a>
+
+
+
+    <nav class="nav-links">
+
+        <a
+            href="#home"
+            class="nav-link active"
+        >
             Home
         </a>
 
-        <a href="#modules">
+        <a
+            href="#modules"
+            class="nav-link"
+        >
             Modules
         </a>
 
-        <a href="#system">
+        <a
+            href="#system"
+            class="nav-link"
+        >
             System
         </a>
 
-        <a href="#about">
+        <a
+            href="#about"
+            class="nav-link"
+        >
             About
         </a>
 
     </nav>
 
 
+
     <button
-        class="nav-button"
+        class="nav-cta magnetic"
         onclick="scrollToModules()"
     >
-        Explore Platform →
+
+        Explore Platform
+
+        <span>
+            ↗
+        </span>
+
     </button>
+
 
 </header>
 
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<main>
+
 
 <section
     class="hero"
@@ -84,23 +191,36 @@
 >
 
 
-    <div class="hero-content">
+    <div class="hero-content reveal">
 
 
-        <div class="status-line">
+        <div class="status-badge">
 
-            <span class="pulse"></span>
+            <span class="status-dot"></span>
 
-            AI AGENT SYSTEM ONLINE
+            SYSTEM ONLINE
+
+            <span class="status-divider"></span>
+
+            v2.0
 
         </div>
+
+
+
+        <div class="eyebrow">
+
+            AI AGENT MANAGEMENT PLATFORM
+
+        </div>
+
 
 
         <h1>
 
             Build.
 
-            <span>
+            <span class="gradient-text">
                 Control.
             </span>
 
@@ -109,7 +229,8 @@
         </h1>
 
 
-        <p>
+
+        <p class="hero-description">
 
             A centralized platform for designing,
             monitoring, managing and orchestrating
@@ -118,25 +239,35 @@
         </p>
 
 
-        <div class="hero-buttons">
+
+        <div class="hero-actions">
 
 
             <button
-                class="primary-btn"
+                class="primary-button magnetic"
                 onclick="scrollToModules()"
             >
 
-                Explore Agents
+                <span>
+                    Explore Agents
+                </span>
 
-                <span>↗</span>
+                <span>
+                    ↗
+                </span>
 
             </button>
 
 
+
             <button
-                class="secondary-btn"
+                class="secondary-button magnetic"
                 onclick="scrollToSystem()"
             >
+
+                <span class="play-icon">
+                    ▶
+                </span>
 
                 System Overview
 
@@ -146,14 +277,15 @@
         </div>
 
 
-        <div class="hero-stats">
+
+        <div class="hero-metrics">
 
 
-            <div>
+            <div class="metric">
 
                 <strong
                     class="counter"
-                    data-target="12"
+                    data-target="56"
                 >
                     0
                 </strong>
@@ -165,29 +297,28 @@
             </div>
 
 
-            <div>
+
+            <div class="metric">
 
                 <strong
                     class="counter"
-                    data-target="03"
+                    data-target="14"
                 >
                     0
                 </strong>
 
                 <span>
-                    Categories
+                    Modules
                 </span>
 
             </div>
 
 
-            <div>
 
-                <strong
-                    class="counter"
-                    data-target="99"
-                >
-                    0
+            <div class="metric">
+
+                <strong>
+                    99<span>%</span>
                 </strong>
 
                 <span>
@@ -199,83 +330,178 @@
 
         </div>
 
+
     </div>
 
 
 
-    <!-- AI VISUAL -->
+    <!-- =================================================
+         ADVANCED AI VISUAL
+         ================================================= -->
 
-    <div class="ai-visual">
-
-        <div class="orbit orbit-one"></div>
-
-        <div class="orbit orbit-two"></div>
-
-        <div class="orbit orbit-three"></div>
-
-
-        <div class="core">
-
-            <div class="core-ring"></div>
+    <div
+        class="hero-visual reveal"
+        data-delay="200"
+    >
 
 
-            <div class="core-center">
+        <div class="visual-grid"></div>
 
-                <span>
-                    AI
-                </span>
 
-                <small>
-                    CORE
-                </small>
+        <div class="orbit orbit-a">
 
-            </div>
+            <span class="orbit-node node-a"></span>
 
         </div>
 
 
-        <div class="node node-one"></div>
+        <div class="orbit orbit-b">
 
-        <div class="node node-two"></div>
+            <span class="orbit-node node-b"></span>
 
-        <div class="node node-three"></div>
+        </div>
 
-        <div class="node node-four"></div>
+
+        <div class="orbit orbit-c">
+
+            <span class="orbit-node node-c"></span>
+
+        </div>
+
+
+
+        <div class="ai-core">
+
+
+            <div class="core-glow"></div>
+
+
+            <div class="core-ring ring-one"></div>
+
+            <div class="core-ring ring-two"></div>
+
+
+            <div class="core-inner">
+
+                <span class="core-label">
+                    AI
+                </span>
+
+                <span class="core-sub">
+                    CORE
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="floating-data data-one">
+
+            <span>
+                CPU
+            </span>
+
+            <strong>
+                98%
+            </strong>
+
+        </div>
+
+
+
+        <div class="floating-data data-two">
+
+            <span>
+                AGENTS
+            </span>
+
+            <strong>
+                24
+            </strong>
+
+        </div>
+
+
+
+        <div class="floating-data data-three">
+
+            <span>
+                STATUS
+            </span>
+
+            <strong>
+                ONLINE
+            </strong>
+
+        </div>
+
 
     </div>
+
 
 </section>
 
 
 
-<!-- TICKER -->
+<!-- =====================================================
+     TICKER
+     ===================================================== -->
 
 <section class="ticker">
 
     <div class="ticker-track">
 
-        <span>AI AGENTS</span>
+
+        <span>
+            AI AGENTS
+        </span>
+
         <b>✦</b>
 
-        <span>AUTOMATION</span>
+        <span>
+            AUTOMATION
+        </span>
+
         <b>✦</b>
 
-        <span>WORKFLOW</span>
+        <span>
+            WORKFLOW
+        </span>
+
         <b>✦</b>
 
-        <span>MONITORING</span>
+        <span>
+            MONITORING
+        </span>
+
         <b>✦</b>
 
-        <span>ORCHESTRATION</span>
+        <span>
+            ORCHESTRATION
+        </span>
+
         <b>✦</b>
 
-        <span>AI AGENTS</span>
+
+        <span>
+            AI AGENTS
+        </span>
+
         <b>✦</b>
 
-        <span>AUTOMATION</span>
+        <span>
+            AUTOMATION
+        </span>
+
         <b>✦</b>
 
-        <span>WORKFLOW</span>
+        <span>
+            WORKFLOW
+        </span>
+
 
     </div>
 
@@ -283,7 +509,9 @@
 
 
 
-<!-- MODULES -->
+<!-- =====================================================
+     MODULES
+     ===================================================== -->
 
 <section
     class="modules-section"
@@ -291,12 +519,12 @@
 >
 
 
-    <div class="section-heading">
+    <div class="section-header reveal">
 
 
         <div>
 
-            <span class="section-number">
+            <span class="section-tag">
                 01 / PLATFORM
             </span>
 
@@ -316,589 +544,39 @@
 
         <p>
 
-            Explore the different layers of the AI Agent
-            Management Platform.
+            Explore the complete AI Agent
+            Management ecosystem.
 
         </p>
 
-    </div>
-
-
-
-    <div class="module-list">
-
-
-        <!-- STATUS MONITORING -->
-
-        <div
-            class="module"
-            onclick="showTemplates('status')"
-        >
-
-            <div class="module-number">
-                01
-            </div>
-
-
-            <div class="module-icon">
-                ◉
-            </div>
-
-
-            <div class="module-info">
-
-                <h3>
-                    Agent Status Monitoring
-                </h3>
-
-
-                <p>
-                    Monitor the health, status and
-                    operational condition of AI agents.
-                </p>
-
-            </div>
-
-
-            <div class="module-arrow">
-                ↗
-            </div>
-
-        </div>
-
-
-
-        <!-- ACTIVITY LOG -->
-
-        <div
-            class="module"
-            onclick="showTemplates('activity')"
-        >
-
-            <div class="module-number">
-                02
-            </div>
-
-
-            <div class="module-icon">
-                ▶
-            </div>
-
-
-            <div class="module-info">
-
-                <h3>
-                    AI Agent Activity Log
-                </h3>
-
-
-                <p>
-                    Track agent tasks, execution history
-                    and real-time activity.
-                </p>
-
-            </div>
-
-
-            <div class="module-arrow">
-                ↗
-            </div>
-
-        </div>
-
-
-
-        <!-- DASHBOARD -->
-
-        <div
-            class="module"
-            onclick="showTemplates('dashboard')"
-        >
-
-            <div class="module-number">
-                03
-            </div>
-
-
-            <div class="module-icon">
-                ◎
-            </div>
-
-
-            <div class="module-info">
-
-                <h3>
-                    AI Agent Dashboard
-                </h3>
-
-
-                <p>
-                    Access and manage different AI agent
-                    dashboard interfaces.
-                </p>
-
-            </div>
-
-
-            <div class="module-arrow">
-                ↗
-            </div>
-
-        </div>
-
 
     </div>
 
 
 
-    <!-- =================================
-         STATUS TEMPLATES
-    ================================== -->
+    <!-- MODULES GENERATED BY JS -->
 
     <div
-        id="status-templates"
-        class="template-panel"
-    >
-
-
-        <div class="template-header">
-
-            <div>
-
-                <span class="section-number">
-                    01 / TEMPLATES
-                </span>
-
-
-                <h2>
-
-                    Agent Status
-
-                    <span>
-                        Monitoring
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <button
-                class="close-btn"
-                onclick="closeTemplates()"
-            >
-                ✕ Close
-            </button>
-
-        </div>
+        class="module-list"
+        id="moduleList"
+    ></div>
 
 
 
-        <div class="template-grid">
-
-
-            <a
-                href="agent status/status 01/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    TEMPLATE 01
-                </span>
-
-                <h3>
-                    Status 01
-                </h3>
-
-                <p>
-                    Agent status monitoring interface.
-                </p>
-
-                <span class="template-link">
-                    Open Template →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent status/status 02/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    TEMPLATE 02
-                </span>
-
-                <h3>
-                    Status 02
-                </h3>
-
-                <p>
-                    Agent status monitoring interface.
-                </p>
-
-                <span class="template-link">
-                    Open Template →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent status/status 03/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    TEMPLATE 03
-                </span>
-
-                <h3>
-                    Status 03
-                </h3>
-
-                <p>
-                    Agent status monitoring interface.
-                </p>
-
-                <span class="template-link">
-                    Open Template →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent status/status 04/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    TEMPLATE 04
-                </span>
-
-                <h3>
-                    Status 04
-                </h3>
-
-                <p>
-                    Agent status monitoring interface.
-                </p>
-
-                <span class="template-link">
-                    Open Template →
-                </span>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =================================
-         ACTIVITY LOG TEMPLATES
-    ================================== -->
+    <!-- TEMPLATE PANELS -->
 
     <div
-        id="activity-templates"
-        class="template-panel"
-    >
-
-
-        <div class="template-header">
-
-            <div>
-
-                <span class="section-number">
-                    02 / TEMPLATES
-                </span>
-
-
-                <h2>
-
-                    AI Agent Activity
-
-                    <span>
-                        Log
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <button
-                class="close-btn"
-                onclick="closeTemplates()"
-            >
-                ✕ Close
-            </button>
-
-        </div>
-
-
-
-        <div class="template-grid">
-
-
-            <a
-                href="agent activiy log/template 01/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    TEMPLATE 01
-                </span>
-
-                <h3>
-                    Template 01
-                </h3>
-
-                <p>
-                    AI Agent Activity Log interface.
-                </p>
-
-                <span class="template-link">
-                    Open Template →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent activiy log/template 02/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    TEMPLATE 02
-                </span>
-
-                <h3>
-                    Template 02
-                </h3>
-
-                <p>
-                    AI Agent Activity Log interface.
-                </p>
-
-                <span class="template-link">
-                    Open Template →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent activiy log/template 03/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    TEMPLATE 03
-                </span>
-
-                <h3>
-                    Template 03
-                </h3>
-
-                <p>
-                    AI Agent Activity Log interface.
-                </p>
-
-                <span class="template-link">
-                    Open Template →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent activiy log/template 04/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    TEMPLATE 04
-                </span>
-
-                <h3>
-                    Template 04
-                </h3>
-
-                <p>
-                    AI Agent Activity Log interface.
-                </p>
-
-                <span class="template-link">
-                    Open Template →
-                </span>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =================================
-         DASHBOARD TEMPLATES
-    ================================== -->
-
-    <div
-        id="dashboard-templates"
-        class="template-panel"
-    >
-
-
-        <div class="template-header">
-
-            <div>
-
-                <span class="section-number">
-                    03 / TEMPLATES
-                </span>
-
-
-                <h2>
-
-                    AI Agent
-
-                    <span>
-                        Dashboard
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <button
-                class="close-btn"
-                onclick="closeTemplates()"
-            >
-                ✕ Close
-            </button>
-
-        </div>
-
-
-
-        <div class="template-grid">
-
-
-            <a
-                href="agent dashboard/four/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    DASHBOARD 01
-                </span>
-
-                <h3>
-                    Dashboard Four
-                </h3>
-
-                <p>
-                    AI Agent Dashboard interface.
-                </p>
-
-                <span class="template-link">
-                    Open Dashboard →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent dashboard/one/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    DASHBOARD 02
-                </span>
-
-                <h3>
-                    Dashboard One
-                </h3>
-
-                <p>
-                    AI Agent Dashboard interface.
-                </p>
-
-                <span class="template-link">
-                    Open Dashboard →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent dashboard/three/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    DASHBOARD 03
-                </span>
-
-                <h3>
-                    Dashboard Three
-                </h3>
-
-                <p>
-                    AI Agent Dashboard interface.
-                </p>
-
-                <span class="template-link">
-                    Open Dashboard →
-                </span>
-
-            </a>
-
-
-            <a
-                href="agent dashboard/two/index.html"
-                class="template-card"
-            >
-
-                <span class="template-number">
-                    DASHBOARD 04
-                </span>
-
-                <h3>
-                    Dashboard Two
-                </h3>
-
-                <p>
-                    AI Agent Dashboard interface.
-                </p>
-
-                <span class="template-link">
-                    Open Dashboard →
-                </span>
-
-            </a>
-
-
-        </div>
-
-    </div>
+        id="templatePanels"
+    ></div>
 
 
 </section>
 
 
 
-<!-- SYSTEM -->
+<!-- =====================================================
+     SYSTEM ARCHITECTURE
+     ===================================================== -->
 
 <section
     class="system-section"
@@ -906,20 +584,21 @@
 >
 
 
-    <div class="system-visual">
+    <div class="system-visual reveal">
 
-        <div class="system-circle circle-one"></div>
 
-        <div class="system-circle circle-two"></div>
+        <div class="system-orbit orbit-1"></div>
 
-        <div class="system-circle circle-three"></div>
+        <div class="system-orbit orbit-2"></div>
+
+        <div class="system-orbit orbit-3"></div>
 
 
         <div class="system-core">
 
-            <span>
+            <small>
                 AGENT
-            </span>
+            </small>
 
             <strong>
                 FLOW
@@ -927,13 +606,27 @@
 
         </div>
 
+
+        <span class="system-node sn-1"></span>
+
+        <span class="system-node sn-2"></span>
+
+        <span class="system-node sn-3"></span>
+
+        <span class="system-node sn-4"></span>
+
+
     </div>
 
 
 
-    <div class="system-content">
+    <div
+        class="system-content reveal"
+        data-delay="200"
+    >
 
-        <span class="section-number">
+
+        <span class="section-tag">
             02 / ARCHITECTURE
         </span>
 
@@ -951,71 +644,81 @@
 
         <p>
 
-            AgentFlow connects monitoring, activity
-            tracking and dashboards into one intelligent
-            ecosystem.
+            AgentFlow connects monitoring,
+            management, execution, control
+            and workflow into one unified
+            AI ecosystem.
 
         </p>
 
 
-        <div class="architecture">
+
+        <div class="architecture-grid">
 
 
-            <div>
+            <div class="architecture-card">
 
-                <span>01</span>
+                <span>
+                    01
+                </span>
 
                 <strong>
                     Monitoring
                 </strong>
 
                 <p>
-                    AI agent status monitoring
+                    Real-time agent health and status.
                 </p>
 
             </div>
 
 
-            <div>
+            <div class="architecture-card">
 
-                <span>02</span>
+                <span>
+                    02
+                </span>
 
                 <strong>
-                    Activity
+                    Management
                 </strong>
 
                 <p>
-                    Agent activity tracking
+                    Profiles, permissions and configuration.
                 </p>
 
             </div>
 
 
-            <div>
+            <div class="architecture-card">
 
-                <span>03</span>
+                <span>
+                    03
+                </span>
 
                 <strong>
-                    Dashboard
+                    Execution
                 </strong>
 
                 <p>
-                    AI agent dashboards
+                    Tasks, history and timelines.
                 </p>
 
             </div>
 
 
-            <div>
+            <div class="architecture-card">
 
-                <span>04</span>
+                <span>
+                    04
+                </span>
 
                 <strong>
-                    Templates
+                    Orchestration
                 </strong>
 
                 <p>
-                    Multiple interface designs
+                    Multi-agent intelligent workflows.
                 </p>
 
             </div>
@@ -1023,13 +726,17 @@
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
 
-<!-- ABOUT -->
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
 
 <section
     class="about-section"
@@ -1037,41 +744,58 @@
 >
 
 
-    <span class="section-number">
-        03 / ABOUT
-    </span>
+    <div class="reveal">
 
 
-    <h2>
-
-        The future of
-
-        <span>
-            AI orchestration.
+        <span class="section-tag">
+            03 / ABOUT
         </span>
 
-    </h2>
+
+        <h2>
+
+            The future of
+
+            <span>
+                AI orchestration.
+            </span>
+
+        </h2>
 
 
-    <p>
+        <p>
 
-        AgentFlow is a collaborative academic project
-        designed to demonstrate how intelligent agents
-        can be managed, monitored and automated through
-        a unified platform.
+            AgentFlow is a collaborative project
+            designed to demonstrate how modern
+            AI agents can be managed, monitored,
+            configured and orchestrated through
+            a unified platform.
 
-    </p>
+        </p>
+
+
+    </div>
+
 
 </section>
 
 
 
-<!-- FOOTER -->
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 
 <footer>
 
-    <div class="footer-logo">
+
+    <div class="footer-brand">
+
         ✦ AgentFlow
+
     </div>
 
 
@@ -1084,11 +808,15 @@
         Built by Team AgentFlow © 2026
     </span>
 
+
 </footer>
 
 
 
+<!-- JAVASCRIPT -->
+
 <script src="script.js"></script>
+
 
 </body>
 
