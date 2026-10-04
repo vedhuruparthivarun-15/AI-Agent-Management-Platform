@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queue Operations Center | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">04 / QUEUE CONTROL</div>
+      <h1>Queue Operations Center</h1>
+      <p class="subtitle">Operate and supervise the live agent task queue with safe execution controls.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  
+<div class="grid"><section class="card"><h2>Queue Controls</h2><div class="row"><span>Pause new tasks</span><button class="btn" data-action="Queue pause toggled">Toggle</button></div><div class="row"><span>Drain active queue</span><button class="btn" data-action="Drain mode enabled">Enable</button></div><div class="row"><span>Clear completed</span><button class="btn" data-action="Completed tasks cleared">Clear</button></div></section><section class="card"><h2>Live Queue</h2><div class="queue-item"><div class="queue-num">Q1</div><div><h3>Invoice extraction</h3><small class="muted">Document Agent</small></div><span class="badge warning">RUNNING</span></div><div class="queue-item"><div class="queue-num">Q2</div><div><h3>Policy lookup</h3><small class="muted">Legal Agent</small></div><span class="badge info">WAITING</span></div></section></div>
+
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

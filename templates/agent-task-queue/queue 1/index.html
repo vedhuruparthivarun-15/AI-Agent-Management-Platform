@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Queue Dashboard | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">01 / AGENT EXECUTION</div>
+      <h1>Task Queue Dashboard</h1>
+      <p class="subtitle">Monitor priorities, workers and queued tasks from one execution control surface.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  
+<div class="stats"><div class="stat"><b>24</b><small>Queued tasks</small></div><div class="stat"><b>08</b><small>Running</small></div><div class="stat"><b>96%</b><small>Success rate</small></div><div class="stat"><b>1.8s</b><small>Avg wait</small></div></div>
+<div class="grid"><section class="card"><h2>Priority Queue</h2>
+<div class="queue-item"><div class="queue-num">01</div><div><h3>Analyze customer feedback</h3><small class="muted">Research Agent · 12:42</small></div><span class="badge danger">HIGH</span></div>
+<div class="queue-item"><div class="queue-num">02</div><div><h3>Generate weekly report</h3><small class="muted">Report Agent · 12:45</small></div><span class="badge warning">MEDIUM</span></div>
+<div class="queue-item"><div class="queue-num">03</div><div><h3>Sync knowledge base</h3><small class="muted">Knowledge Agent · 12:49</small></div><span class="badge info">LOW</span></div>
+</section><section class="card"><h2>Queue Health</h2><div class="row"><span>Throughput</span><strong>82%</strong></div><div class="progress"><i style="width:82%"></i></div><div class="row"><span>Worker capacity</span><strong>68%</strong></div><div class="progress"><i style="width:68%"></i></div><div class="row"><span>Retry pressure</span><strong>14%</strong></div><div class="progress"><i style="width:14%"></i></div></section></div>
+
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

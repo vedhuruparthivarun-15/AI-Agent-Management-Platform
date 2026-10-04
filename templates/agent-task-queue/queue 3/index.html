@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Execution Pipeline Queue | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">03 / QUEUE MONITOR</div>
+      <h1>Execution Pipeline Queue</h1>
+      <p class="subtitle">Visualize how tasks move from pending to processing, completion and failure.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  
+<div class="card"><h2>Execution Pipeline</h2>
+<div class="row"><span><span class="badge info">01</span> Pending</span><strong>14 tasks</strong></div>
+<div class="row"><span><span class="badge warning">02</span> Processing</span><strong>06 tasks</strong></div>
+<div class="row"><span><span class="badge success">03</span> Completed</span><strong>128 tasks</strong></div>
+<div class="row"><span><span class="badge danger">04</span> Failed</span><strong>03 tasks</strong></div>
+</div><br><div class="grid"><section class="card"><h2>Queue Capacity</h2><p class="muted">Current queue utilization</p><div style="font-size:42px;font-weight:800;margin:18px 0">72%</div><div class="progress"><i style="width:72%"></i></div></section><section class="card"><h2>Scheduling Rules</h2><div class="row"><span>Priority first</span><span class="badge success">ON</span></div><div class="row"><span>Auto balancing</span><span class="badge success">ON</span></div><div class="row"><span>Rate limiting</span><span class="badge warning">ACTIVE</span></div></section></div>
+
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

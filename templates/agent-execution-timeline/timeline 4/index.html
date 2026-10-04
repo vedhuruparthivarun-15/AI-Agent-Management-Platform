@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Execution Timeline 4 | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">04 / EXECUTION TIMELINE</div>
+      <h1>Agent Execution Timeline 4</h1>
+      <p class="subtitle">Follow an agent run from queue entry to completion with a clear chronological view.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  <div class="card"><h2>Event Stream</h2><div class="row"><span><span class="badge info">12:42:10</span> Queue accepted task</span><span class="muted">system</span></div><div class="row"><span><span class="badge info">12:42:11</span> Worker assigned</span><span class="muted">scheduler</span></div><div class="row"><span><span class="badge warning">12:42:15</span> Tool call started</span><span class="muted">agent</span></div><div class="row"><span><span class="badge success">12:42:27</span> Output validated</span><span class="muted">validator</span></div><div class="row"><span><span class="badge success">12:42:28</span> Run completed</span><span class="muted">system</span></div></div>
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

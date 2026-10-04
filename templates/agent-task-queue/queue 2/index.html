@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priority & Worker Queue | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">02 / TASK SCHEDULING</div>
+      <h1>Priority & Worker Queue</h1>
+      <p class="subtitle">A clean queue view for assigning pending agent work to available workers.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  
+<div class="grid"><section class="card"><h2>Incoming Tasks</h2>
+<div class="queue-item"><div class="queue-num">A1</div><div><h3>Summarize support tickets</h3><small class="muted">Support Agent · 4 subtasks</small></div><button class="btn" data-action="Task moved to processing">Start</button></div>
+<div class="queue-item"><div class="queue-num">A2</div><div><h3>Classify new leads</h3><small class="muted">Sales Agent · 12 records</small></div><button class="btn" data-action="Task moved to processing">Start</button></div>
+<div class="queue-item"><div class="queue-num">A3</div><div><h3>Validate campaign data</h3><small class="muted">Analytics Agent · 8 checks</small></div><button class="btn" data-action="Task moved to processing">Start</button></div>
+</section><section class="card"><h2>Worker Pool</h2><div class="row"><span>Worker-01</span><span class="badge success">AVAILABLE</span></div><div class="row"><span>Worker-02</span><span class="badge success">AVAILABLE</span></div><div class="row"><span>Worker-03</span><span class="badge warning">BUSY</span></div><div class="row"><span>Worker-04</span><span class="badge danger">RETRYING</span></div></section></div>
+
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History Search & Filters | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">04 / EXECUTION HISTORY</div>
+      <h1>History Search & Filters</h1>
+      <p class="subtitle">A focused history browser for finding executions by status, agent and result.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  <div class="card"><h2>Saved Filters</h2><div class="actions" style="margin-bottom:18px"><button class="btn primary" data-action="Showing successful runs">Success</button><button class="btn" data-action="Showing failed runs">Failed</button><button class="btn" data-action="Showing all runs">All</button></div><div class="table-wrap"><table class="table"><tr><th>Time</th><th>Agent</th><th>Execution</th><th>Status</th></tr><tr><td>12:42</td><td>Research Agent</td><td>Market summary</td><td><span class="badge success">SUCCESS</span></td></tr><tr><td>12:39</td><td>Data Agent</td><td>Data validation</td><td><span class="badge danger">FAILED</span></td></tr><tr><td>12:35</td><td>Support Agent</td><td>Ticket summary</td><td><span class="badge success">SUCCESS</span></td></tr></table></div></div>
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

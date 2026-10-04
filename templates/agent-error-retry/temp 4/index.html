@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Error & Retry 4 | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">04 / ERROR & RETRY</div>
+      <h1>Agent Error & Retry 4</h1>
+      <p class="subtitle">Detect execution failures, understand the cause and recover safely through configurable retry flows.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  <div class="card"><h2>Failure Detail</h2><div class="error-box"><strong>ERR-502 · External Tool Timeout</strong><p class="muted" style="margin-top:8px">Execution #EX-1040 failed after the search tool exceeded its 10 second timeout.</p></div><h2 style="margin-top:20px">Recovery Actions</h2><div class="actions"><button class="btn primary" data-action="Retrying execution">Retry Execution</button><button class="btn" data-action="Execution cancelled">Cancel</button><button class="btn" data-action="Error marked resolved">Mark Resolved</button></div><h2 style="margin-top:24px">Technical Log</h2><div class="code">12:44:01 request started<br>12:44:11 timeout exceeded<br>12:44:11 retry policy evaluated<br>12:44:12 retry scheduled</div></div>
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
