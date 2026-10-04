@@ -1,8 +1,6 @@
 # AI-Agent-Management-Platform
 
 
-# AI-Agent-Management-Platform
-
 ## 🚀 AI Agent Management Platform
 
 The **AI Agent Management Platform** is a web-based interface designed to manage, monitor, and track AI agents through a centralized platform.
