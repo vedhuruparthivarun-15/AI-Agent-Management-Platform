@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Execution Timeline 1 | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">01 / EXECUTION TIMELINE</div>
+      <h1>Agent Execution Timeline 1</h1>
+      <p class="subtitle">Follow an agent run from queue entry to completion with a clear chronological view.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  <div class="grid"><section class="card"><h2>Execution Timeline</h2><div class="timeline"><div class="event"><h3>Task received</h3><small>12:42:10 · Queue</small></div><div class="event"><h3>Agent started</h3><small>12:42:11 · Worker-02</small></div><div class="event"><h3>Tools executed</h3><small>12:42:15 · Search + Parser</small></div><div class="event"><h3>Result generated</h3><small>12:42:27 · Confidence 96%</small></div><div class="event"><h3>Execution completed</h3><small>12:42:28 · SUCCESS</small></div></div></section><section class="card"><h2>Run Summary</h2><div class="row"><span>Total time</span><strong>18.4s</strong></div><div class="row"><span>Steps</span><strong>12</strong></div><div class="row"><span>Tools</span><strong>4</strong></div></section></div>
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

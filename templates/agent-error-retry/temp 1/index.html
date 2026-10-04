@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Error & Retry 1 | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">01 / ERROR & RETRY</div>
+      <h1>Agent Error & Retry 1</h1>
+      <p class="subtitle">Detect execution failures, understand the cause and recover safely through configurable retry flows.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  <div class="grid"><section class="card"><h2>Active Errors</h2><div class="error-box"><strong>ERR-502 · Tool timeout</strong><p class="muted" style="margin-top:7px">Research Agent could not reach the search provider.</p></div><div class="error-box"><strong>ERR-401 · Authorization</strong><p class="muted" style="margin-top:7px">Report Agent token expired while generating output.</p></div></section><section class="card"><h2>Retry Policy</h2><div class="row"><span>Max attempts</span><strong>3</strong></div><div class="row"><span>Backoff</span><strong>Exponential</strong></div><div class="row"><span>Auto retry</span><span class="badge success">ENABLED</span></div></section></div>
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

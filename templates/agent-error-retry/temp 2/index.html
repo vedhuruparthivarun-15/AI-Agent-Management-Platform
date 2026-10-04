@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Error & Retry 2 | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">02 / ERROR & RETRY</div>
+      <h1>Agent Error & Retry 2</h1>
+      <p class="subtitle">Detect execution failures, understand the cause and recover safely through configurable retry flows.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  <div class="card"><h2>Retry Queue</h2><div class="queue-item"><div class="queue-num">R1</div><div><h3>Search provider timeout</h3><small class="muted">Attempt 2 of 3 · next retry in 12s</small></div><button class="btn" data-action="Retry started">Retry</button></div><div class="queue-item"><div class="queue-num">R2</div><div><h3>Database connection reset</h3><small class="muted">Attempt 1 of 3 · next retry in 5s</small></div><button class="btn" data-action="Retry started">Retry</button></div><div class="queue-item"><div class="queue-num">R3</div><div><h3>Model rate limit</h3><small class="muted">Attempt 3 of 3 · manual action required</small></div><button class="btn" data-action="Manual retry requested">Manual</button></div></div>
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>

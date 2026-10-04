@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Execution History | AgentFlow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">✦ Agent<span>Flow</span></div>
+  <a class="back" href="../../../../index.html">← Back to AgentFlow</a>
+</header>
+<main class="container">
+  <div class="top">
+    <div>
+      <div class="eyebrow">01 / EXECUTION HISTORY</div>
+      <h1>Execution History</h1>
+      <p class="subtitle">Browse completed and failed agent executions with useful operational metadata.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+      <button class="btn primary" onclick="showToast('Action completed successfully')">Run Demo</button>
+    </div>
+  </div>
+  <div class="card"><h2>Recent Executions</h2><div class="table-wrap"><table class="table"><tr><th>Run ID</th><th>Agent</th><th>Task</th><th>Status</th><th>Duration</th></tr>
+<tr><td>#EX-1042</td><td>Research Agent</td><td>Market summary</td><td><span class="badge success">SUCCESS</span></td><td>18.4s</td></tr>
+<tr><td>#EX-1041</td><td>Report Agent</td><td>Weekly report</td><td><span class="badge success">SUCCESS</span></td><td>32.1s</td></tr>
+<tr><td>#EX-1040</td><td>Data Agent</td><td>CSV validation</td><td><span class="badge danger">FAILED</span></td><td>7.2s</td></tr>
+<tr><td>#EX-1039</td><td>Support Agent</td><td>Ticket summary</td><td><span class="badge success">SUCCESS</span></td><td>12.8s</td></tr></table></div></div>
+</main>
+<footer><span>✦ AgentFlow — AI Agent Management Platform</span><span>Team AgentFlow © 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
