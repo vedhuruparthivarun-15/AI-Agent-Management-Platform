@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workflow Automation | AgentFlow</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✦</span> Agent<span>Flow</span>
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="#workflow">Workflow</a>
+            <a href="#builder">Builder</a>
+            <a href="#templates">Templates</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="nav-button" onclick="runWorkflow()">
+            Run Workflow →
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="workflow">
+
+            <div class="hero-content">
+
+                <div class="status-badge">
+                    <span></span>
+                    AUTOMATION SYSTEM ONLINE
+                </div>
+
+                <h1>
+                    Workflow
+                    <span>Automation.</span>
+                </h1>
+
+                <p>
+                    Design intelligent workflows using triggers,
+                    AI processing, automated actions and real-time results.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-button" onclick="runWorkflow()">
+                        ▶ Run Workflow
+                    </button>
+
+                    <button class="secondary-button" onclick="scrollToTemplates()">
+                        Explore Templates
+                    </button>
+
+                </div>
+
+                <div class="stats">
+
+                    <div>
+                        <strong id="workflowCount">24</strong>
+                        <small>Templates</small>
+                    </div>
+
+                    <div>
+                        <strong>06</strong>
+                        <small>Automations</small>
+                    </div>
+
+                    <div>
+                        <strong>99%</strong>
+                        <small>Automation</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="workflow-display">
+
+                <div class="display-header">
+
+                    <span>AGENTFLOW ENGINE</span>
+
+                    <span class="online">
+                        ● ONLINE
+                    </span>
+
+                </div>
+
+
+                <div class="workflow-line">
+
+                    <div class="workflow-node active">
+                        <div class="node-icon">⚡</div>
+                        <small>TRIGGER</small>
+                        <h3>New Request</h3>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="workflow-node">
+                        <div class="node-icon">🧠</div>
+                        <small>AI AGENT</small>
+                        <h3>Process Data</h3>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="workflow-node">
+                        <div class="node-icon">⚙</div>
+                        <small>ACTION</small>
+                        <h3>Execute Task</h3>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="workflow-node success">
+                        <div class="node-icon">✓</div>
+                        <small>RESULT</small>
+                        <h3>Completed</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="display-status" id="status">
+                    Workflow ready to run.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUILDER -->
+
+        <section class="builder-section" id="builder">
+
+            <div class="section-heading">
+
+                <span>BUILD YOUR AUTOMATION</span>
+
+                <h2>
+                    Create intelligent workflows.
+                </h2>
+
+                <p>
+                    Connect triggers, AI agents and actions together.
+                </p>
+
+            </div>
+
+
+            <div class="builder">
+
+                <div class="step-card" onclick="selectStep(this)">
+
+                    <div class="step-icon">⚡</div>
+
+                    <small>STEP 01</small>
+
+                    <h3>Start Workflow</h3>
+
+                    <p>
+                        Start your automation when an event occurs.
+                    </p>
+
+                </div>
+
+
+                <div class="connector">→</div>
+
+
+                <div class="step-card" onclick="selectStep(this)">
+
+                    <div class="step-icon">🧠</div>
+
+                    <small>STEP 02</small>
+
+                    <h3>Process Request</h3>
+
+                    <p>
+                        Analyze information using intelligent AI.
+                    </p>
+
+                </div>
+
+
+                <div class="connector">→</div>
+
+
+                <div class="step-card" onclick="selectStep(this)">
+
+                    <div class="step-icon">⚙</div>
+
+                    <small>STEP 03</small>
+
+                    <h3>Perform Action</h3>
+
+                    <p>
+                        Execute an automated task.
+                    </p>
+
+                </div>
+
+
+                <div class="connector">→</div>
+
+
+                <div class="step-card" onclick="selectStep(this)">
+
+                    <div class="step-icon">✓</div>
+
+                    <small>STEP 04</small>
+
+                    <h3>Get Result</h3>
+
+                    <p>
+                        Receive the final workflow result.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="builder-controls">
+
+                <button onclick="addStep()">
+                    + Add Step
+                </button>
+
+                <button onclick="resetWorkflow()">
+                    ↻ Reset
+                </button>
+
+                <button class="run-btn" onclick="runWorkflow()">
+                    ▶ Run Workflow
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TEMPLATES -->
+
+        <section class="templates-section" id="templates">
+
+            <div class="section-heading">
+
+                <span>WORKFLOW TEMPLATES</span>
+
+                <h2>
+                    24 ready-to-use automations.
+                </h2>
+
+                <p>
+                    Choose an automation template and open its workflow.
+                </p>
+
+            </div>
+
+
+            <!-- AUTOMATION 01 -->
+
+            <div class="automation-group">
+
+                <div class="automation-title">
+
+                    <div class="automation-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>Smart Triggers</h3>
+                        <p>Start workflows automatically from events and conditions.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="template-grid">
+
+                    <a href="templates/smart-triggers/smart-trigger-1.html" class="template-card">
+                        <div class="template-icon">⚡</div>
+                        <small>SMART TRIGGER 01</small>
+                        <h3>Event Trigger</h3>
+                        <p>Start a workflow when a new event occurs.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/smart-triggers/smart-trigger-2.html" class="template-card">
+                        <div class="template-icon">🔔</div>
+                        <small>SMART TRIGGER 02</small>
+                        <h3>Notification Trigger</h3>
+                        <p>Automatically react when a notification arrives.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/smart-triggers/smart-trigger-3.html" class="template-card">
+                        <div class="template-icon">⏰</div>
+                        <small>SMART TRIGGER 03</small>
+                        <h3>Schedule Trigger</h3>
+                        <p>Start an automation at a scheduled time.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/smart-triggers/smart-trigger-4.html" class="template-card">
+                        <div class="template-icon">🎯</div>
+                        <small>SMART TRIGGER 04</small>
+                        <h3>Condition Trigger</h3>
+                        <p>Start workflows when a condition becomes true.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- AUTOMATION 02 -->
+
+            <div class="automation-group">
+
+                <div class="automation-title">
+
+                    <div class="automation-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>AI Processing</h3>
+                        <p>Use intelligent AI processing to analyze workflow data.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="template-grid">
+
+                    <a href="templates/ai-processing/ai-processing-1.html" class="template-card">
+                        <div class="template-icon">🧠</div>
+                        <small>AI PROCESSING 01</small>
+                        <h3>Text Analysis</h3>
+                        <p>Analyze text using an AI processing step.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/ai-processing/ai-processing-2.html" class="template-card">
+                        <div class="template-icon">💡</div>
+                        <small>AI PROCESSING 02</small>
+                        <h3>AI Decision</h3>
+                        <p>Use AI to analyze data and make a decision.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/ai-processing/ai-processing-3.html" class="template-card">
+                        <div class="template-icon">📄</div>
+                        <small>AI PROCESSING 03</small>
+                        <h3>Document Processing</h3>
+                        <p>Process and summarize document information.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/ai-processing/ai-processing-4.html" class="template-card">
+                        <div class="template-icon">💬</div>
+                        <small>AI PROCESSING 04</small>
+                        <h3>AI Response</h3>
+                        <p>Generate an intelligent response from input.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- AUTOMATION 03 -->
+
+            <div class="automation-group">
+
+                <div class="automation-title">
+
+                    <div class="automation-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>Automated Actions</h3>
+                        <p>Automatically execute tasks after processing.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="template-grid">
+
+                    <a href="templates/automated-actions/automated-actions-1.html" class="template-card">
+                        <div class="template-icon">⚙</div>
+                        <small>AUTOMATED ACTION 01</small>
+                        <h3>Database Update</h3>
+                        <p>Automatically update stored information.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/automated-actions/automated-actions-2.html" class="template-card">
+                        <div class="template-icon">📨</div>
+                        <small>AUTOMATED ACTION 02</small>
+                        <h3>Send Notification</h3>
+                        <p>Send a notification after a workflow step.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/automated-actions/automated-actions-3.html" class="template-card">
+                        <div class="template-icon">📋</div>
+                        <small>AUTOMATED ACTION 03</small>
+                        <h3>Create Task</h3>
+                        <p>Automatically create a new task.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/automated-actions/automated-actions-4.html" class="template-card">
+                        <div class="template-icon">🔄</div>
+                        <small>AUTOMATED ACTION 04</small>
+                        <h3>Update Record</h3>
+                        <p>Automatically modify an existing record.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- AUTOMATION 04 -->
+
+            <div class="automation-group">
+
+                <div class="automation-title">
+
+                    <div class="automation-number">
+                        04
+                    </div>
+
+                    <div>
+                        <h3>Real-Time Results</h3>
+                        <p>Monitor automation execution and receive results instantly.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="template-grid">
+
+                    <a href="templates/real-time-results/real-time-results-1.html" class="template-card">
+                        <div class="template-icon">📊</div>
+                        <small>REAL-TIME RESULT 01</small>
+                        <h3>Live Dashboard</h3>
+                        <p>Display workflow information in real time.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/real-time-results/real-time-results-2.html" class="template-card">
+                        <div class="template-icon">📡</div>
+                        <small>REAL-TIME RESULT 02</small>
+                        <h3>Live Monitor</h3>
+                        <p>Monitor workflow execution continuously.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/real-time-results/real-time-results-3.html" class="template-card">
+                        <div class="template-icon">✓</div>
+                        <small>REAL-TIME RESULT 03</small>
+                        <h3>Execution Status</h3>
+                        <p>Display the current workflow status.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/real-time-results/real-time-results-4.html" class="template-card">
+                        <div class="template-icon">📈</div>
+                        <small>REAL-TIME RESULT 04</small>
+                        <h3>Result Tracker</h3>
+                        <p>Track the result of each workflow execution.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- AUTOMATION 05 -->
+
+            <div class="automation-group">
+
+                <div class="automation-title">
+
+                    <div class="automation-number">
+                        05
+                    </div>
+
+                    <div>
+                        <h3>Data Processing</h3>
+                        <p>Process, organize and transform workflow data.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="template-grid">
+
+                    <a href="templates/data-processing/data-processing-1.html" class="template-card">
+                        <div class="template-icon">📥</div>
+                        <small>DATA PROCESSING 01</small>
+                        <h3>Data Collection</h3>
+                        <p>Collect data from a workflow input.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/data-processing/data-processing-2.html" class="template-card">
+                        <div class="template-icon">🔎</div>
+                        <small>DATA PROCESSING 02</small>
+                        <h3>Data Filtering</h3>
+                        <p>Filter information based on selected conditions.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/data-processing/data-processing-3.html" class="template-card">
+                        <div class="template-icon">🔀</div>
+                        <small>DATA PROCESSING 03</small>
+                        <h3>Data Transformation</h3>
+                        <p>Transform raw information into useful data.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/data-processing/data-processing-4.html" class="template-card">
+                        <div class="template-icon">🗂</div>
+                        <small>DATA PROCESSING 04</small>
+                        <h3>Data Organization</h3>
+                        <p>Organize processed information automatically.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- AUTOMATION 06 -->
+
+            <div class="automation-group">
+
+                <div class="automation-title">
+
+                    <div class="automation-number">
+                        06
+                    </div>
+
+                    <div>
+                        <h3>Email Automation</h3>
+                        <p>Create automated email workflows and notifications.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="template-grid">
+
+                    <a href="templates/email-automation/email-automation-1.html" class="template-card">
+                        <div class="template-icon">✉</div>
+                        <small>EMAIL AUTOMATION 01</small>
+                        <h3>Welcome Email</h3>
+                        <p>Automatically send a welcome message.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/email-automation/email-automation-2.html" class="template-card">
+                        <div class="template-icon">📨</div>
+                        <small>EMAIL AUTOMATION 02</small>
+                        <h3>Notification Email</h3>
+                        <p>Send an email when an event occurs.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/email-automation/email-automation-3.html" class="template-card">
+                        <div class="template-icon">⏰</div>
+                        <small>EMAIL AUTOMATION 03</small>
+                        <h3>Scheduled Email</h3>
+                        <p>Send an email at a scheduled time.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+
+                    <a href="templates/email-automation/email-automation-4.html" class="template-card">
+                        <div class="template-icon">🤖</div>
+                        <small>EMAIL AUTOMATION 04</small>
+                        <h3>AI Email Generator</h3>
+                        <p>Generate an email response automatically.</p>
+                        <span>Open Template →</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about" id="about">
+
+            <div class="section-heading">
+
+                <span>ABOUT AGENTFLOW</span>
+
+                <h2>
+                    Automate repetitive work.
+                </h2>
+
+                <p>
+                    AgentFlow connects triggers, AI processing,
+                    automated actions and real-time results into
+                    simple intelligent workflows.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="logo">
+            <span>✦</span> Agent<span>Flow</span>
+        </div>
+
+        <p>
+            AI Agent Management Platform
+        </p>
+
+        <p>
+            © 2026 AgentFlow
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
