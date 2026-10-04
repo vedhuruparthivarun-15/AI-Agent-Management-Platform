@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentFlow | Role Access</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+<header class="navbar">
+  <div class="logo"><span class="logo-symbol">✦</span><span>Agent<span>Flow</span></span></div>
+  <nav><a href="../../../../index.html">Home</a><a href="../../../../index.html#modules">Modules</a><a href="#template">Template</a></nav>
+  <a class="nav-button" href="../../../../index.html">Back to Platform</a>
+</header>
+<main class="template-shell" id="template">
+  <div class="template-top">
+    <div>
+      <div class="template-kicker">02 / PERMISSIONS · TEMP14</div>
+      <h1>Role Access</h1>
+      <p>Assign Viewer, Operator, Editor or Administrator access.</p>
+    </div>
+    <a class="back-link" href="../../../../index.html#modules">← All Modules</a>
+  </div>
+  <form id="form" class="ui-card"><label>Agent</label><select id="pick" class="select"></select><label>Access role</label><select id="role" class="select"><option>Viewer</option><option>Operator</option><option>Editor</option><option>Administrator</option></select><div id="summary" class="notice"></div><button class="btn">Apply Role</button><div id="msg" class="message"></div></form>
+  <div class="template-footer"><span>AgentFlow · Agent Management</span><span>Frontend Template · Demo Data</span></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
