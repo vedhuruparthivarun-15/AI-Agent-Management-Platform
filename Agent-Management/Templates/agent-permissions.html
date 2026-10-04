@@ -1,0 +1,83 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Permissions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>AI Agent Management</h1>
+        <nav>
+            <a href="agent-list.html">Agent List</a>
+            <a href="agent-profile.html">Agent Profile</a>
+            <a href="agent-configuration.html">Configuration</a>
+            <a href="agent-permissions.html">Permissions</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Agent Permissions</h2>
+        <p>Manage the access rights of an AI agent.</p>
+
+        <form id="permissionForm">
+            <label for="agentSelect">Select Agent</label>
+            <select id="agentSelect">
+                <option value="A001">Customer Support</option>
+                <option value="A002">Data Analyst</option>
+                <option value="A003">Email Assistant</option>
+            </select>
+
+            <h3>Available Permissions</h3>
+
+            <label>
+                <input type="checkbox" name="permission" value="read">
+                Read Data
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="permission" value="write">
+                Write Data
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="permission" value="execute">
+                Execute Tasks
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="permission" value="manage">
+                Manage Agents
+            </label><br><br>
+
+            <button type="submit">Save Permissions</button>
+        </form>
+
+        <p id="message"></p>
+    </main>
+
+    <script>
+        document.getElementById("permissionForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let selected = document.querySelectorAll(
+                    'input[name="permission"]:checked'
+                );
+
+                let permissions = Array.from(selected)
+                    .map(item => item.value);
+
+                document.getElementById("message").textContent =
+                    "Permissions saved: " +
+                    (permissions.length ? permissions.join(", ") : "None");
+            });
+    </script>
+</body>
+
+</html>
+```

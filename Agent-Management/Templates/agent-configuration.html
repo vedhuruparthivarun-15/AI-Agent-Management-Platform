@@ -1,0 +1,66 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Configuration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>AI Agent Management</h1>
+        <nav>
+            <a href="agent-list.html">Agent List</a>
+            <a href="agent-profile.html">Agent Profile</a>
+            <a href="agent-configuration.html">Configuration</a>
+            <a href="agent-permissions.html">Permissions</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Agent Configuration</h2>
+        <p>Update the agent's basic information.</p>
+
+        <form id="configForm">
+            <label for="agentId">Agent ID</label>
+            <input type="text" id="agentId" value="A001" readonly>
+
+            <label for="agentName">Agent Name</label>
+            <input type="text" id="agentName" value="Customer Support" required>
+
+            <label for="agentType">Agent Type</label>
+            <select id="agentType">
+                <option>Chatbot</option>
+                <option>Analytics</option>
+                <option>Automation</option>
+                <option>Research</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea id="description" rows="4">Answers customer questions and provides support.</textarea>
+
+            <label for="temperature">Response Creativity</label>
+            <input type="range" id="temperature" min="0" max="1" step="0.1" value="0.5">
+
+            <button type="submit">Save Configuration</button>
+        </form>
+
+        <p id="message"></p>
+    </main>
+
+    <script>
+        document.getElementById("configForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                document.getElementById("message").textContent =
+                    "Configuration saved successfully!";
+            });
+    </script>
+</body>
+
+</html>
+```

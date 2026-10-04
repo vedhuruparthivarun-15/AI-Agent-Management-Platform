@@ -1,0 +1,186 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Management Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>AI Agent Management Platform</h1>
+        <p>Manage your AI agents in one place</p>
+    </header>
+
+    <nav>
+        <button class="nav-btn active" data-page="list">Agent List</button>
+        <button class="nav-btn" data-page="profile">Agent Profile</button>
+        <button class="nav-btn" data-page="configuration">Configuration</button>
+        <button class="nav-btn" data-page="permissions">Permissions</button>
+    </nav>
+
+    <main>
+
+        <!-- AGENT LIST TEMPLATE -->
+        <section id="list" class="page active">
+            <h2>Agent List</h2>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3 id="totalAgents">0</h3>
+                    <p>Total Agents</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="activeAgents">0</h3>
+                    <p>Active Agents</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="inactiveAgents">0</h3>
+                    <p>Inactive Agents</p>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <input type="search" id="searchInput" placeholder="Search agents...">
+
+                <button id="addAgentBtn">+ Add Agent</button>
+            </div>
+
+            <form id="agentForm" class="panel hidden">
+                <h3 id="formTitle">Add New Agent</h3>
+
+                <input type="hidden" id="editId">
+
+                <label for="agentName">Agent Name</label>
+                <input type="text" id="agentName" required>
+
+                <label for="agentType">Agent Type</label>
+                <select id="agentType">
+                    <option value="Chatbot">Chatbot</option>
+                    <option value="Analytics">Analytics</option>
+                    <option value="Automation">Automation</option>
+                    <option value="Research">Research</option>
+                </select>
+
+                <label for="agentDescription">Description</label>
+                <textarea id="agentDescription" rows="3" placeholder="Enter agent description"></textarea>
+
+                <div class="form-actions">
+                    <button type="submit">Save Agent</button>
+                    <button type="button" id="cancelBtn" class="secondary">Cancel</button>
+                </div>
+            </form>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Agent Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="agentTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- AGENT PROFILE TEMPLATE -->
+        <section id="profile" class="page">
+            <h2>Agent Profile</h2>
+
+            <div class="panel">
+                <label for="profileSelect">Select Agent</label>
+                <select id="profileSelect"></select>
+            </div>
+
+            <div id="profileDetails" class="profile-card">
+                <p>Select an agent to view its profile.</p>
+            </div>
+        </section>
+
+        <!-- AGENT CONFIGURATION TEMPLATE -->
+        <section id="configuration" class="page">
+            <h2>Agent Configuration</h2>
+
+            <form id="configurationForm" class="panel">
+                <label for="configAgentSelect">Select Agent</label>
+                <select id="configAgentSelect" required></select>
+
+                <label for="configName">Agent Name</label>
+                <input type="text" id="configName" required>
+
+                <label for="configType">Agent Type</label>
+                <select id="configType">
+                    <option value="Chatbot">Chatbot</option>
+                    <option value="Analytics">Analytics</option>
+                    <option value="Automation">Automation</option>
+                    <option value="Research">Research</option>
+                </select>
+
+                <label for="configDescription">Description</label>
+                <textarea id="configDescription" rows="4"></textarea>
+
+                <label for="configStatus">Agent Status</label>
+                <select id="configStatus">
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+
+                <button type="submit">Save Configuration</button>
+                <p id="configMessage" class="message"></p>
+            </form>
+        </section>
+
+        <!-- AGENT PERMISSIONS TEMPLATE -->
+        <section id="permissions" class="page">
+            <h2>Agent Permissions</h2>
+
+            <form id="permissionsForm" class="panel">
+                <label for="permissionAgentSelect">Select Agent</label>
+                <select id="permissionAgentSelect" required></select>
+
+                <h3>Access Permissions</h3>
+
+                <label class="check-label">
+                    <input type="checkbox" name="permission" value="Read Data">
+                    Read Data
+                </label>
+
+                <label class="check-label">
+                    <input type="checkbox" name="permission" value="Write Data">
+                    Write Data
+                </label>
+
+                <label class="check-label">
+                    <input type="checkbox" name="permission" value="Execute Tasks">
+                    Execute Tasks
+                </label>
+
+                <label class="check-label">
+                    <input type="checkbox" name="permission" value="Manage Agents">
+                    Manage Agents
+                </label>
+
+                <button type="submit">Save Permissions</button>
+                <p id="permissionMessage" class="message"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>AI Agent Management Platform | Agent Management Module</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+```
