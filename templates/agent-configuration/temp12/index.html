@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentFlow | Advanced Configuration</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+<header class="navbar">
+  <div class="logo"><span class="logo-symbol">✦</span><span>Agent<span>Flow</span></span></div>
+  <nav><a href="../../../../index.html">Home</a><a href="../../../../index.html#modules">Modules</a><a href="#template">Template</a></nav>
+  <a class="nav-button" href="../../../../index.html">Back to Platform</a>
+</header>
+<main class="template-shell" id="template">
+  <div class="template-top">
+    <div>
+      <div class="template-kicker">04 / CONFIGURATION · TEMP12</div>
+      <h1>Advanced Configuration</h1>
+      <p>Manage instructions, logging and fallback behavior.</p>
+    </div>
+    <a class="back-link" href="../../../../index.html#modules">← All Modules</a>
+  </div>
+  <form id="form" class="ui-card"><label>Agent</label><select id="pick" class="select"></select><label>System instructions</label><textarea id="prompt" class="textarea" rows="7" placeholder="Define how the agent should behave..."></textarea><label class="check"><input id="logging" type="checkbox"> Keep execution logs</label><label class="check"><input id="fallback" type="checkbox"> Enable fallback response</label><button class="btn">Save Configuration</button><div id="msg" class="message"></div></form>
+  <div class="template-footer"><span>AgentFlow · Agent Management</span><span>Frontend Template · Demo Data</span></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

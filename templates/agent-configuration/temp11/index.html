@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentFlow | Runtime Settings</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+<header class="navbar">
+  <div class="logo"><span class="logo-symbol">✦</span><span>Agent<span>Flow</span></span></div>
+  <nav><a href="../../../../index.html">Home</a><a href="../../../../index.html#modules">Modules</a><a href="#template">Template</a></nav>
+  <a class="nav-button" href="../../../../index.html">Back to Platform</a>
+</header>
+<main class="template-shell" id="template">
+  <div class="template-top">
+    <div>
+      <div class="template-kicker">03 / CONFIGURATION · TEMP11</div>
+      <h1>Runtime Settings</h1>
+      <p>Update runtime settings and operating preferences.</p>
+    </div>
+    <a class="back-link" href="../../../../index.html#modules">← All Modules</a>
+  </div>
+  <form id="form" class="ui-card"><label>Agent</label><select id="pick" class="select"></select><label>Response creativity: <span id="tempValue">0.5</span></label><input id="temperature" type="range" min="0" max="1" step=".1" value=".5" style="width:100%;accent-color:#7768ff"><label class="check"><input id="retry" type="checkbox"> Enable automatic retry</label><label class="check"><input id="log" type="checkbox"> Enable execution logging</label><button class="btn">Save Runtime Settings</button><div id="msg" class="message"></div></form>
+  <div class="template-footer"><span>AgentFlow · Agent Management</span><span>Frontend Template · Demo Data</span></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

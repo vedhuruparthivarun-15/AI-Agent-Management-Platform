@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentFlow | Permission Checklist</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background-grid"></div>
+<div class="cursor-glow"></div>
+<header class="navbar">
+  <div class="logo"><span class="logo-symbol">✦</span><span>Agent<span>Flow</span></span></div>
+  <nav><a href="../../../../index.html">Home</a><a href="../../../../index.html#modules">Modules</a><a href="#template">Template</a></nav>
+  <a class="nav-button" href="../../../../index.html">Back to Platform</a>
+</header>
+<main class="template-shell" id="template">
+  <div class="template-top">
+    <div>
+      <div class="template-kicker">01 / PERMISSIONS · TEMP13</div>
+      <h1>Permission Checklist</h1>
+      <p>Grant or remove individual agent capabilities.</p>
+    </div>
+    <a class="back-link" href="../../../../index.html#modules">← All Modules</a>
+  </div>
+  <form id="form" class="ui-card"><label>Agent</label><select id="pick" class="select"></select><div class="permission-grid" style="margin-top:20px"><label class="permission"><span><b>Read Data</b><small>Read connected data</small></span><input type="checkbox" value="Read Data"></label><label class="permission"><span><b>Write Data</b><small>Create or update data</small></span><input type="checkbox" value="Write Data"></label><label class="permission"><span><b>Execute Tasks</b><small>Run assigned tasks</small></span><input type="checkbox" value="Execute Tasks"></label><label class="permission"><span><b>Manage Agents</b><small>Modify agents</small></span><input type="checkbox" value="Manage Agents"></label></div><button class="btn" style="margin-top:20px">Save Permissions</button><div id="msg" class="message"></div></form>
+  <div class="template-footer"><span>AgentFlow · Agent Management</span><span>Frontend Template · Demo Data</span></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
